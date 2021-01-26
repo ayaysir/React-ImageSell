@@ -16,7 +16,6 @@ function AdminSetupForm({ onRegister }: { onRegister: Function }) {
 
     // 비밀번호의 변경을 처리하는 함수
     const handleChangePassword = useCallback(e => {
-        console.log(e.target.value)
         setPassword(e.target.value)
     }, [])
 

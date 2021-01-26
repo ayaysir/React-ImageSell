@@ -7,3 +7,5 @@ export const adminSetup = (userId: number, userName: string, userPassword: strin
 })
 
 export const signIn = (userId: string, password: string) => client.post(`/api/authenticate?username=${userId}&password=${password}`)
+
+export const getMyInfo = () => client.get("/users/myinfo")

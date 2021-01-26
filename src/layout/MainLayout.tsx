@@ -1,13 +1,13 @@
 import React from "react"
-import MainHeader from "../components/common/MainHeader"
 import MenuBar from "../components/common/MenuBar"
 import Footer from "../components/common/Footer"
+import MainHeaderContainer from "../containers/common/MainHeaderContainer"
 
 function MainLayout({ children }: { children: any }) {
     // console.log(typeof children)
     return (
         <div>
-            <MainHeader />
+            <MainHeaderContainer />
             <MenuBar />
             {children}
             <Footer />

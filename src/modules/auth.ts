@@ -3,6 +3,7 @@ import { takeLatest, call, put } from "redux-saga/effects"
 import { createReducer } from "typesafe-actions"
 import * as api from "../lib/api"
 import client from "../lib/client"
+import Cookies from "js-cookie"
 
 // 액션 타입
 const SET_ACCESS_TOKEN = "auth/SET_ACCESS_TOKEN"
@@ -27,8 +28,11 @@ function* loginSaga(action: { payload: { userId: any; password: any } }) {
         yield put(setAccessToken(accessToken))
 
         client.defaults.headers.common.Authorization = `Bearer ${accessToken}`
+
+        // 쿠키에 액세스 토큰 저장
+        Cookies.set("accessToken", accessToken, { expires: 1 })
     } catch (err) {
-        console.log(err)
+        console.log("error from loginSaga", err)
     }
 }
 

@@ -11,6 +11,10 @@ import rootReducer, { rootSaga } from "./modules"
 import { composeWithDevTools } from "redux-devtools-extension"
 import createSagaMiddleware from "redux-saga"
 
+import Cookies from "js-cookie"
+import { setAccessToken, checkMyInfo } from "./modules/auth"
+import client from "./lib/client"
+
 // 사가 미들웨어 생성
 const sagaMiddleware = createSagaMiddleware()
 
@@ -20,8 +24,24 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(sagaMiddleware))
 )
 
+// 저장된 토큰을 가지고 로그인 처리 (스토어 상태에 액세스토큰 저장)를 하고 로그인한 사용자 정보를 얻는다.
+function loadUser() {
+  try {
+    const savedToken = Cookies.get("accessToken")
+    if(!savedToken) return;
+    store.dispatch(setAccessToken(savedToken))
+    client.defaults.headers.common.Authorization = `Bearer ${savedToken}`
+    store.dispatch(checkMyInfo())
+  } catch(err) {
+    console.log("error from loadUser", err)
+  }
+}
+
 // 사가 미들웨어 실행
 sagaMiddleware.run(rootSaga)
+
+// 저장된 토큰으로 로그인을 처리하는 함수를 실행한다. (사가 실행 이후)
+loadUser()
 
 ReactDOM.render(
   <React.StrictMode>

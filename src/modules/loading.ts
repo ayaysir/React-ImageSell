@@ -1,0 +1,40 @@
+import { createAction } from "redux-actions"
+import { createReducer } from "typesafe-actions"
+import { createStandardAction } from "typesafe-actions/dist/deprecated/create-standard-action"
+
+// 액션 타입
+const START_LOADING = "loading/START_LOADING"
+const END_LOADING = "loading/END_LOADING"
+
+
+
+// 액션 생성 함수
+export const startLoading = createAction(
+    START_LOADING,
+    (actionType: any) => actionType
+)
+
+export const endLoading = createAction(
+    END_LOADING,
+    (actionType: any) => actionType
+)
+
+// export const startLoading = createStandardAction(START_LOADING)
+// export const endLoading = createStandardAction(END_LOADING)
+
+// 초기 상태
+const initialState = {}
+
+// 리듀서 함수 정의
+const loading = createReducer(initialState, {
+    [START_LOADING]: (state, { payload }) => ({
+        ...state,
+        [payload]: true
+    }),
+    [END_LOADING]: (state, { payload }) => ({
+        ...state,
+        [payload]: false
+    })
+},)
+
+export default loading

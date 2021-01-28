@@ -2,9 +2,9 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 // 부모 컴포넌트에서 컴포넌트 속성으로 수신
-function CodeGroupList({ codeGroups, isLoading }: { codeGroups: any; isLoading: boolean }) {
+function CodeGroupList({ codeGroups, isLoading }: { codeGroups: Array<any>; isLoading: boolean }) {
     // 코드그룹 목록 화면 표시
-    return(
+    return (
         <div> {/* align center */}
             <h2>코드그룹 목록</h2>
             {isLoading && "로딩중"}
@@ -16,7 +16,7 @@ function CodeGroupList({ codeGroups, isLoading }: { codeGroups: any; isLoading: 
                             <tr>
                                 <th align="center">코드그룹코드</th>
                                 <th align="center">코드그룹명</th>
-                                <th align="center">등록일시</th> 
+                                <th align="center">등록일시</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -25,9 +25,7 @@ function CodeGroupList({ codeGroups, isLoading }: { codeGroups: any; isLoading: 
                                     <td colSpan={3}>List is empty.</td>
                                 </tr>
                             )}
-
-{console.log(codeGroups)}
-                            {codeGroups.length && codeGroups.map((codeGroup: any) => (
+                            {codeGroups.length ? codeGroups.map((codeGroup: any) => (
                                 <tr key={codeGroup.groupCode}>
                                     <td align="center">{codeGroup.groupCode}</td>
                                     <td align="left">
@@ -37,7 +35,7 @@ function CodeGroupList({ codeGroups, isLoading }: { codeGroups: any; isLoading: 
                                     </td>
                                     <td align="center">{codeGroup.regDate}</td>
                                 </tr>
-                            ))}
+                            )) : null}
                         </tbody>
                     </table>
                 </>

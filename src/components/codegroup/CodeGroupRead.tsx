@@ -10,7 +10,7 @@ function CodeGroupRead({
 }: {
     codeGroup: any;
     isLoading: boolean;
-    groupCode: any;
+    groupCode: string;
     onRemove: any;
 }) {
 

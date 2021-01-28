@@ -12,6 +12,7 @@ function MenuBar({ isAuthorized, isAdmin }: { isAuthorized: boolean; isAdmin: bo
                             <>
                                 <td width="120"><Link to="/">홈</Link></td>
                                 <td width="120"><Link to="/codegroup">코드그룹 관리</Link></td>
+                                <td width="120"><Link to="/codedetail">코드 관리</Link></td>
                             </>
                         )}
                         {/* 로그인한 사용자이고 관리자 아님 */}

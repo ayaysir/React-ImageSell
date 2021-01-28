@@ -3,20 +3,22 @@ import { all } from "redux-saga/effects"
 import auth, { authSaga } from "./auth"
 import loading from "./loading"
 import codeGroup, { codeGroupSaga } from "./codegroup"
+import codeDetail, { codeDetailSaga } from "./codedetail"
 
 // 루트 리듀서
 const rootReducer = combineReducers({
     auth,
     loading,
-    codeGroup
-    
+    codeGroup,
+    codeDetail
 })
 
 // 루트 사가
 export function* rootSaga() {
     yield all([
         authSaga(),
-        codeGroupSaga()
+        codeGroupSaga(),
+        codeDetailSaga()
     ])
 }
 

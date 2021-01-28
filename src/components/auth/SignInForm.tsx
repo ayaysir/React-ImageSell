@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from "react"
+import { Link } from "react-router-dom"
 
 // 로그인 폼 구성
 function SignInForm({ onSignIn }: { onSignIn: Function }) {
@@ -44,6 +45,8 @@ function SignInForm({ onSignIn }: { onSignIn: Function }) {
                     </tbody>
                 </table>
             </form>
+            {/* 회원가입 링크 */}
+            <p><Link to="/signup">회원가입</Link></p>
         </div>
     )
 }

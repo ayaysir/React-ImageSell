@@ -32,3 +32,27 @@ export const removeCodeDetail = (
 
 // 그룹코드 목록 획득 서버 API 호출 함수
 export const fetchGroupCodeList = () => client.get("/codes/codeGroup")
+
+// 회원가입 API 
+export const signUp = (userId: string, userName: string, userPassword: string, job: string) => (
+    client.post("/users", { userId, userName, userPw: userPassword, job: "00" })
+)
+
+// 직업코드 목록 조회
+export const fetchJobCodeList = () => client.get("/codes/job")
+
+// 회원정보
+export const fetchMember = (userNo: number) => client.get(`/users/${userNo}`)
+export const fetchMemberList = () => {
+    const res = client.get("/users")
+    console.log(res)
+}
+export const modifyMember = (userNo: number, payload: any) => client.put(`/users/${userNo}`, payload)
+export const writeMember = (userId: string, userName: string, userPassword: string, job: string) => (
+    client.post(`/users`, { 
+        userId: userId, 
+        userName: userName, 
+        userPw: userPassword, 
+        job: "00"})
+)
+export const removeMember = (userNo: number) => client.delete(`/users/${userNo}`)

@@ -4,13 +4,15 @@ import auth, { authSaga } from "./auth"
 import loading from "./loading"
 import codeGroup, { codeGroupSaga } from "./codegroup"
 import codeDetail, { codeDetailSaga } from "./codedetail"
+import member, { memberSaga } from "./member"
 
 // 루트 리듀서
 const rootReducer = combineReducers({
     auth,
     loading,
     codeGroup,
-    codeDetail
+    codeDetail,
+    member
 })
 
 // 루트 사가
@@ -18,7 +20,8 @@ export function* rootSaga() {
     yield all([
         authSaga(),
         codeGroupSaga(),
-        codeDetailSaga()
+        codeDetailSaga(),
+        memberSaga()
     ])
 }
 

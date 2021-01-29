@@ -19,6 +19,10 @@ import MemberListPage from "./pages/member/MemberListPage";
 import MemberModifyPage from "./pages/member/MemberModifyPage";
 import MemberReadPage from "./pages/member/MemberReadPage";
 import MemberRegisterPage from "./pages/member/MemberRegisterPage";
+import NoticeListPage from "./pages/notice/NoticeListPage";
+import NoticeModifyPage from "./pages/notice/NoticeModifyPage";
+import NoticeReadPage from "./pages/notice/NoticeReadPage";
+import NoticeRegisterPage from "./pages/notice/NoticeRegisterPage";
 
 function App() {
   return (
@@ -48,6 +52,11 @@ function App() {
       <Route component={BoardRegisterPage} path="/board/create" />
       <Route component={BoardModifyPage} path="/board/edit/:boardNo" />
       <Route component={BoardReadPage} path="/board/read/:boardNo" />
+
+      <Route component={NoticeListPage} path="/notice" exact />
+      <Route component={NoticeRegisterPage} path="/notice/create" />
+      <Route component={NoticeModifyPage} path="/notice/edit/:noticeNo" />
+      <Route component={NoticeReadPage} path="/notice/read/:noticeNo" />
     </>
 
   )

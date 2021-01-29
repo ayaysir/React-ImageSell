@@ -63,3 +63,10 @@ export const fetchBoardList = () => client.get("/boards")
 export const modifyBoard = (boardNo: number, title: string, content: string) => client.put(`/boards/${boardNo}`, { title, content })
 export const writeBoard = (title: string, content: string) => client.post(`/boards/`, { title, content })
 export const removeBoard = (boardNo: number) => client.delete(`/boards/${boardNo}`)
+
+// 공지사항
+export const fetchNotice = (noticeNo: number) => client.get(`/notices/${noticeNo}`)
+export const fetchNoticeList = () => client.get("/notices")
+export const modifyNotice = (noticeNo: number, title: string, content: string) => client.put(`/notices/${noticeNo}`, { title, content })
+export const writeNotice = (title: string, content: string) => client.post(`/notices/`, { title, content })
+export const removeNotice = (noticeNo: number) => client.delete(`/notices/${noticeNo}`)

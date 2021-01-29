@@ -1,6 +1,10 @@
 import { Route } from "react-router-dom"
 import SignInPage from "./pages/auth/SignInPage";
 import SignUpPage from "./pages/auth/SignUpPage";
+import BoardListPage from "./pages/board/BoardListPage";
+import BoardModifyPage from "./pages/board/BoardModifyPage";
+import BoardReadPage from "./pages/board/BoardReadPage";
+import BoardRegisterPage from "./pages/board/BoardRegisterPage";
 import CodeDetailListPage from "./pages/codedetail/CodeDetailListPage";
 import CodeDetailModifyPage from "./pages/codedetail/CodeDetailModifyPage";
 import CodeDetailReadPage from "./pages/codedetail/CodeDetailReadPage";
@@ -39,6 +43,11 @@ function App() {
       <Route component={MemberRegisterPage} path="/member/create" />
       <Route component={MemberModifyPage} path="/member/edit/:userNo" />
       <Route component={MemberReadPage} path="/member/read/:userNo" />
+
+      <Route component={BoardListPage} path="/board" exact />
+      <Route component={BoardRegisterPage} path="/board/create" />
+      <Route component={BoardModifyPage} path="/board/edit/:boardNo" />
+      <Route component={BoardReadPage} path="/board/read/:boardNo" />
     </>
 
   )

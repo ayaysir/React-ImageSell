@@ -56,3 +56,10 @@ export const writeMember = (userId: string, userName: string, userPassword: stri
         job: "00"})
 )
 export const removeMember = (userNo: number) => client.delete(`/users/${userNo}`)
+
+// 게시판
+export const fetchBoard = (boardNo: number) => client.get(`/boards/${boardNo}`)
+export const fetchBoardList = () => client.get("/boards")
+export const modifyBoard = (boardNo: number, title: string, content: string) => client.put(`/boards/${boardNo}`, { title, content })
+export const writeBoard = (title: string, content: string) => client.post(`/boards/`, { title, content })
+export const removeBoard = (boardNo: number) => client.delete(`/boards/${boardNo}`)

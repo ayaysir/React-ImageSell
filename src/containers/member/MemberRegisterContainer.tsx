@@ -5,9 +5,9 @@ import * as api from "../../lib/api"
 
 const MemberRegisterContainer = ({ history }: RouteComponentProps<any>) => {
 
-    const onRegister = async(userIde: string, userName: string, userPassword: string, job: string) => {
+    const onRegister = async(userId: string, userName: string, userPassword: string, job: string) => {
         try {
-            const response = await api.writeMember(userIde, userName, userPassword, job)
+            const response = await api.writeMember(userId, userName, userPassword, job)
             alert("등록이 완료되었습니다.")
             history.push(`/member/read/${response.data.userNo}`)
         } catch (err) {

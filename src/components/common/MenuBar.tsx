@@ -28,6 +28,8 @@ function MenuBar({ isAuthorized, isAdmin }: { isAuthorized: boolean; isAdmin: bo
                                 <td width="120"><Link to="/item">상품</Link></td>
                                 <td width="120"><Link to="/coin/create">코인충전</Link></td>
                                 <td width="120"><Link to="/coin/charge">충전내역</Link></td>
+                                <td width="120"><Link to="/useritem">구매상품</Link></td>
+                                <td width="120"><Link to="/coin/pay">구매내역</Link></td>
                             </>
                         )}
                         {/* 로그인 안함 */}

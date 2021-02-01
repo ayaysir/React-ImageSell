@@ -89,3 +89,10 @@ export const removeItem = (itemId: number) => client.delete(`/items/${itemId}`)
 // 코인
 export const fetchChargeCoinList = () => client.get("/coins")
 export const chargeCoin = (amount: number) => client.post(`/coins/charge/${amount}`, { amount })
+export const fetchPayCoinList = () => client.get("/coins/pay")
+
+// 상품구매
+export const buyItem = (itemId: number) => client.get(`/items/buy/${itemId}`)
+export const fetchUserItem = (userItemNo: number) => client.get(`/useritems/${userItemNo}`)
+export const fetchUserItemList = () => client.get(`/useritems/`)
+export const downloadUserItem = (userItemNo: number) => client.get(`/useritems/download/${userItemNo}`, {responseType: 'blob'})

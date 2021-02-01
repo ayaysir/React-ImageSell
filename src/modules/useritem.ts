@@ -4,40 +4,40 @@ import { createReducer } from "typesafe-actions"
 import createRequestSaga from "../lib/createRequestSaga"
 import * as api from "./../lib/api"
 
-export const FETCH_ONE = "item/FETCH_ONE"
-const FETCH_ONE_SUCCESS = "item/FETCH_ONE_SUCCESS"
-const FETCH_ONE_FAILURE = "item/FETCH_ONE_FAILURE"
+export const FETCH_ONE = "useritem/FETCH_ONE"
+const FETCH_ONE_SUCCESS = "useritem/FETCH_ONE_SUCCESS"
+const FETCH_ONE_FAILURE = "useritem/FETCH_ONE_FAILURE"
 
-export const FETCH_LIST = "item/FETCH_LIST"
-const FETCH_LIST_SUCCESS = "item/FETCH_LIST_SUCCESS"
-const FETCH_LIST_FAILURE = "item/FETCH_LIST_FAILURE"
+export const FETCH_LIST = "useritem/FETCH_LIST"
+const FETCH_LIST_SUCCESS = "useritem/FETCH_LIST_SUCCESS"
+const FETCH_LIST_FAILURE = "useritem/FETCH_LIST_FAILURE"
 
-export const fetchOne = createAction(FETCH_ONE, (itemId: number) => itemId)
+export const fetchOne = createAction(FETCH_ONE, (userItemNo: number) => userItemNo)
 export const fetchList = createAction(FETCH_LIST)
 
-const fetchOneSaga = createRequestSaga(FETCH_ONE, api.fetchItem)
-const fetchListSaga = createRequestSaga(FETCH_LIST, api.fetchItemList)
+const fetchOneSaga = createRequestSaga(FETCH_ONE, api.fetchUserItem)
+const fetchListSaga = createRequestSaga(FETCH_LIST, api.fetchUserItemList)
 
-export function* itemSaga() {
+export function* userItemSaga() {
     yield takeLatest(FETCH_ONE, fetchOneSaga)
     yield takeLatest(FETCH_LIST, fetchListSaga)
 }
 
 const initialState = {
-    item: null,
-    items: [],
+    userItem: null,
+    userItems: [],
     error: null
 }
 
 // 리듀서 함수 정의
-const item = createReducer(initialState, {
+const useritem = createReducer(initialState, {
     [FETCH_ONE]: (state) => ({
         ...state,
-        item: null
+        userItem: null
     }),
     [FETCH_ONE_SUCCESS]: (state, action) => ({
         ...state,
-        item: action.payload
+        userItem: action.payload
     }),
     [FETCH_ONE_FAILURE]: (state, action) => ({
         ...state,
@@ -45,11 +45,11 @@ const item = createReducer(initialState, {
     }),
     [FETCH_LIST]: (state) => ({
         ...state,
-        items: []
+        userItems: []
     }),
     [FETCH_LIST_SUCCESS]: (state, action) => ({
         ...state,
-        items: action.payload
+        userItems: action.payload
     }),
     [FETCH_LIST_FAILURE]: (state, action) => ({
         ...state,
@@ -57,4 +57,4 @@ const item = createReducer(initialState, {
     })
 })
 
-export default item
+export default useritem

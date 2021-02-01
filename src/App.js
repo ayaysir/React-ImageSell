@@ -15,6 +15,7 @@ import CodeGroupReadPage from "./pages/codegroup/CodeGroupReadPage";
 import CodeGroupRegisterPage from "./pages/codegroup/CodeGroupRegisterPage";
 import CoinChargeListPage from "./pages/coin/CoinChargeListPage";
 import CoinChargeRegisterPage from "./pages/coin/CoinChargeRegisterPage";
+import CoinPayListPage from "./pages/coin/CoinPayListPage";
 import HomePage from "./pages/HomePage"
 import ItemListPage from "./pages/item/ItemListPage";
 import ItemModifyPage from "./pages/item/ItemModifyPage";
@@ -29,6 +30,7 @@ import NoticeListPage from "./pages/notice/NoticeListPage";
 import NoticeModifyPage from "./pages/notice/NoticeModifyPage";
 import NoticeReadPage from "./pages/notice/NoticeReadPage";
 import NoticeRegisterPage from "./pages/notice/NoticeRegisterPage";
+import UserItemListPage from "./pages/useritem/UserItemListPage";
 
 function App() {
   return (
@@ -71,6 +73,9 @@ function App() {
 
       <Route component={CoinChargeListPage} path="/coin/charge" />
       <Route component={CoinChargeRegisterPage} path="/coin/create" />
+
+      <Route component={UserItemListPage} path="/useritem" />
+      <Route component={CoinPayListPage} path="/coin/pay" />
 
     </>
 

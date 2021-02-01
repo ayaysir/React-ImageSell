@@ -27,6 +27,16 @@ const ItemReadContainer = ({ itemId, history }: ItemIIDProps) => {
         }
     }
 
+    // 상품 구매함수 정의
+    const onBuy = async () => {
+        try {
+            const response = await api.buyItem(itemId)
+            alert(response.data)
+        } catch (err) {
+            httpStatusHandler(err, history)
+        }
+    }
+
     useEffect(() => {
         dispatch(fetchOne(itemId))
     }, [dispatch, itemId])
@@ -38,6 +48,7 @@ const ItemReadContainer = ({ itemId, history }: ItemIIDProps) => {
             itemId={itemId}
             onRemove={onRemove}
             isAdmin={isAdmin}
+            onBuy={onBuy}
         />
     )
 }

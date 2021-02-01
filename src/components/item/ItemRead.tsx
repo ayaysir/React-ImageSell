@@ -8,7 +8,7 @@ const previewUrl = (itemId: any) => {
     )
 }
 
-function ItemRead({ item, isLoading, itemId, onRemove, isAdmin }: any) {
+function ItemRead({ item, isLoading, itemId, onRemove, isAdmin, onBuy }: any) {
 
     return (
         <div data-align="center">
@@ -53,6 +53,7 @@ function ItemRead({ item, isLoading, itemId, onRemove, isAdmin }: any) {
                             <button onClick={onRemove}>삭제</button>
                         </>
                     )}
+                    {!isAdmin && <button onClick={onBuy}>구매</button>}
                     <Link to="/item">목록</Link>
                 </>
             )}

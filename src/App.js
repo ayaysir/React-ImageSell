@@ -13,6 +13,8 @@ import CodeGroupListPage from "./pages/codegroup/CodeGroupListPage";
 import CodeGroupModifyPage from "./pages/codegroup/CodeGroupModifyPage";
 import CodeGroupReadPage from "./pages/codegroup/CodeGroupReadPage";
 import CodeGroupRegisterPage from "./pages/codegroup/CodeGroupRegisterPage";
+import CoinChargeListPage from "./pages/coin/CoinChargeListPage";
+import CoinChargeRegisterPage from "./pages/coin/CoinChargeRegisterPage";
 import HomePage from "./pages/HomePage"
 import ItemListPage from "./pages/item/ItemListPage";
 import ItemModifyPage from "./pages/item/ItemModifyPage";
@@ -66,6 +68,10 @@ function App() {
       <Route component={ItemRegisterPage} path="/item/create" />
       <Route component={ItemModifyPage} path="/item/edit/:itemId" />
       <Route component={ItemReadPage} path="/item/read/:itemId" />
+
+      <Route component={CoinChargeListPage} path="/coin/charge" />
+      <Route component={CoinChargeRegisterPage} path="/coin/create" />
+
     </>
 
   )

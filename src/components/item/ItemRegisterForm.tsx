@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useCallback, useEffect, useState } from "react"
+import React, { ChangeEvent, FormEvent, useCallback, useState } from "react"
 import { Link } from "react-router-dom"
 
 function ItemRegisterForm({ onRegister }: any) {

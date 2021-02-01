@@ -71,9 +71,10 @@ export const modifyNotice = (noticeNo: number, title: string, content: string) =
 export const writeNotice = (title: string, content: string) => client.post(`/notices/`, { title, content })
 export const removeNotice = (noticeNo: number) => client.delete(`/notices/${noticeNo}`)
 
-export const fetchItem = (itemId: any) => client.get(`/items/${itemId}`)
+// 상품
+export const fetchItem = (itemId: number) => client.get(`/items/${itemId}`)
 export const fetchItemList = () => client.get(`/items`)
-export const modifyItem = (itemId: any, formData: FormData) => client.put(`/items/${itemId}`, formData, {
+export const modifyItem = (itemId: number, formData: FormData) => client.put(`/items/${itemId}`, formData, {
     headers: {
         "Content-type": "multipart/form-data"
     }
@@ -83,5 +84,8 @@ export const writeItem = (formData: FormData) => client.post(`/items`, formData,
         "Content-type": "multipart/form-data"
     }
 })
-export const removeItem = (itemId: any) => client.delete(`/items/${itemId}`)
+export const removeItem = (itemId: number) => client.delete(`/items/${itemId}`)
 
+// 코인
+export const fetchChargeCoinList = () => client.get("/coins")
+export const chargeCoin = (amount: number) => client.post(`/coins/charge/${amount}`, { amount })

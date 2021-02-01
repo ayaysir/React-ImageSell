@@ -1,5 +1,4 @@
 import ItemModifyContainer from "../../containers/item/ItemModifyContainer";
-import NoticeModifyContainer from "../../containers/notice/NoticeModifyContainer";
 import MainLayout from "../../layout/MainLayout";
 
 function ItemModifyPage({ match }: any) {

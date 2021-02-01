@@ -15,7 +15,7 @@ const ItemModifyContainer = ({ itemId, history }: ItemIIDProps) => {
         isLoading: loading[FETCH_ONE],
     }))
 
-    const onModify = async (itemId: any, itemName: string, price: any, description: string, file: File, previewFile: File) => {
+    const onModify = async (itemId: number, itemName: string, price: any, description: string, file: File, previewFile: File) => {
         const itemObject = {
             itemId: itemId,
             itemName: itemName,

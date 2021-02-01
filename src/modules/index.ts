@@ -7,6 +7,7 @@ import codeDetail, { codeDetailSaga } from "./codedetail"
 import member, { memberSaga } from "./member"
 import board, { boardSaga } from "./board"
 import notice, { noticeSaga } from "./notice"
+import item, { itemSaga } from "./item"
 
 // 루트 리듀서
 const rootReducer = combineReducers({
@@ -16,7 +17,8 @@ const rootReducer = combineReducers({
     codeDetail,
     member,
     board,
-    notice
+    notice,
+    item
 })
 
 // 루트 사가
@@ -27,7 +29,8 @@ export function* rootSaga() {
         codeDetailSaga(),
         memberSaga(),
         boardSaga(),
-        noticeSaga()
+        noticeSaga(),
+        itemSaga()
     ])
 }
 

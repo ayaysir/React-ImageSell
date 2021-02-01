@@ -14,6 +14,10 @@ import CodeGroupModifyPage from "./pages/codegroup/CodeGroupModifyPage";
 import CodeGroupReadPage from "./pages/codegroup/CodeGroupReadPage";
 import CodeGroupRegisterPage from "./pages/codegroup/CodeGroupRegisterPage";
 import HomePage from "./pages/HomePage"
+import ItemListPage from "./pages/item/ItemListPage";
+import ItemModifyPage from "./pages/item/ItemModifyPage";
+import ItemReadPage from "./pages/item/ItemReadPage";
+import ItemRegisterPage from "./pages/item/ItemRegisterPage";
 import AdminSetupPage from "./pages/member/AdminSetupPage";
 import MemberListPage from "./pages/member/MemberListPage";
 import MemberModifyPage from "./pages/member/MemberModifyPage";
@@ -57,6 +61,11 @@ function App() {
       <Route component={NoticeRegisterPage} path="/notice/create" />
       <Route component={NoticeModifyPage} path="/notice/edit/:noticeNo" />
       <Route component={NoticeReadPage} path="/notice/read/:noticeNo" />
+
+      <Route component={ItemListPage} path="/item" exact />
+      <Route component={ItemRegisterPage} path="/item/create" />
+      <Route component={ItemModifyPage} path="/item/edit/:itemId" />
+      <Route component={ItemReadPage} path="/item/read/:itemId" />
     </>
 
   )

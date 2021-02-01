@@ -70,3 +70,18 @@ export const fetchNoticeList = () => client.get("/notices")
 export const modifyNotice = (noticeNo: number, title: string, content: string) => client.put(`/notices/${noticeNo}`, { title, content })
 export const writeNotice = (title: string, content: string) => client.post(`/notices/`, { title, content })
 export const removeNotice = (noticeNo: number) => client.delete(`/notices/${noticeNo}`)
+
+export const fetchItem = (itemId: any) => client.get(`/items/${itemId}`)
+export const fetchItemList = () => client.get(`/items`)
+export const modifyItem = (itemId: any, formData: FormData) => client.put(`/items/${itemId}`, formData, {
+    headers: {
+        "Content-type": "multipart/form-data"
+    }
+})
+export const writeItem = (formData: FormData) => client.post(`/items`, formData, {
+    headers: {
+        "Content-type": "multipart/form-data"
+    }
+})
+export const removeItem = (itemId: any) => client.delete(`/items/${itemId}`)
+

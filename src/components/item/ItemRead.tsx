@@ -11,7 +11,7 @@ const previewUrl = (itemId: any) => {
 function ItemRead({ item, isLoading, itemId, onRemove, isAdmin, onBuy }: any) {
 
     return (
-        <div data-align="center">
+        <article>
             <h2>상품 상세보기</h2>
             {isLoading && "로딩중..."}
             {!isLoading && item && (
@@ -57,7 +57,7 @@ function ItemRead({ item, isLoading, itemId, onRemove, isAdmin, onBuy }: any) {
                     <Link to="/item">목록</Link>
                 </>
             )}
-        </div>
+        </article>
 
     )
 }

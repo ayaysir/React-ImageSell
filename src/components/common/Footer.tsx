@@ -2,9 +2,9 @@ import React from "react"
 
 function Footer() {
     return (
-        <div>
-            <p>2021 All Right Reserved.</p>
-        </div>
+        <footer>
+            <p>&copy; 2021 <a href="http://yoonbumtae.com" target="_blank" rel="noreferrer">BGSMM</a>. All Right Reserved.</p>
+        </footer>
     )
 }
 

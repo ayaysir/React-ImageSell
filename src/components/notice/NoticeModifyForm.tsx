@@ -28,7 +28,7 @@ function NoticeModifyForm({ notice, isLoading, onModify }: any ) {
     }, [notice])
 
     return(
-        <div data-align="center">
+        <article>
             <h2>공지사항 수정</h2>
             {isLoading && "로딩중..."}
             {!isLoading && notice && (
@@ -72,7 +72,7 @@ function NoticeModifyForm({ notice, isLoading, onModify }: any ) {
                     </div>
                 </form>
             )}
-        </div>
+        </article>
     )
 }
 

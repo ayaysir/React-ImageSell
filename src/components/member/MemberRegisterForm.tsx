@@ -1,6 +1,6 @@
 import React, { FormEvent, useCallback, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { MemberRegisterInfo } from "../../@types/MemberInfo"
+import { MemberRegisterInfo } from "../../interfaces/MemberInfo"
 import { fetchJobCodeList } from "../../lib/api"
 
 function MemberRegisterForm({ onRegister }: MemberRegisterInfo) {
@@ -46,7 +46,7 @@ function MemberRegisterForm({ onRegister }: MemberRegisterInfo) {
     }, [])
 
     return (
-        <div data-align="center">
+        <article>
             <h2>회원 등록</h2>
             <form onSubmit={handleSubmit}>
                 <table>
@@ -100,7 +100,7 @@ function MemberRegisterForm({ onRegister }: MemberRegisterInfo) {
                 </div>
             </form>
 
-        </div>
+        </article>
     )
 }
 

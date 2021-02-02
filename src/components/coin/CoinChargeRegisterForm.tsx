@@ -15,7 +15,7 @@ function CoinChargeRegisterForm({ onRegister }: any) {
     }, [amount, onRegister])
 
     return (
-        <div data-align="center">
+        <article>
             <h2>코인 충전</h2>
 
             <form onSubmit={handleSubmit}>
@@ -33,7 +33,7 @@ function CoinChargeRegisterForm({ onRegister }: any) {
                     <Link to="/coin/charge">충전내역</Link>
                 </div>
             </form>
-        </div>
+        </article>
     )
 }
 

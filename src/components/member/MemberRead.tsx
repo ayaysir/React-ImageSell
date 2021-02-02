@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { MemberReadInfo } from "../../@types/MemberInfo"
+import { MemberReadInfo } from "../../interfaces/MemberInfo"
 import { fetchJobCodeList } from "../../lib/api"
 
 function MemberRead({ member, isLoading, userNo, onRemove }: MemberReadInfo) {
@@ -24,7 +24,7 @@ function MemberRead({ member, isLoading, userNo, onRemove }: MemberReadInfo) {
     const doNothing = () => { }
 
     return (
-        <div data-align="center">
+        <article>
             <h2>회원 목록</h2>
             {isLoading && "로딩중..."}
             {!isLoading && member && (
@@ -100,7 +100,7 @@ function MemberRead({ member, isLoading, userNo, onRemove }: MemberReadInfo) {
                     <Link to={`/member/`}>목록</Link>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 

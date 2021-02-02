@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { withRouter } from "react-router-dom"
-import { PdsIIDProps } from "../../@types/PdsInfo"
+import { PdsIIDProps } from "../../interfaces/PdsInfo"
 import * as api from "../../lib/api"
 import httpStatusHandler from "../../util/httpStatusHandler"
 import { isAdmin as hasRoleAdmin } from "../../modules/selector"

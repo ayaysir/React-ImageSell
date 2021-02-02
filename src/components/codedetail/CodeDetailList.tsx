@@ -5,13 +5,13 @@ import { Link } from "react-router-dom"
 function CodeDetailList({ codeDetails, isLoading }: { codeDetails: Array<any>; isLoading: boolean }) {
     // 코드 목록 화면 표시
     return (
-        <div> {/* align center */}
+        <article> {/* align center */}
             <h2>코드 목록</h2>
             {isLoading && "로딩중"}
             {!isLoading && codeDetails && (
                 <>
                     <Link to="/codedetail/create">새로 만들기</Link>
-                    <table>
+                    <table className="table-board">
                         <thead>
                             <tr>
                                 <th align="center">그룹코드</th>
@@ -45,7 +45,7 @@ function CodeDetailList({ codeDetails, isLoading }: { codeDetails: Array<any>; i
                     </table>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 

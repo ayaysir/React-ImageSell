@@ -20,7 +20,7 @@ function NoticeRegisterForm({ onRegister }: any ) {
     }, [title, content, onRegister])
 
     return(
-        <div data-align="center">
+        <article>
             <h2>공지사항 등록</h2>
             <form onSubmit={handleSubmit}>
                 <table>
@@ -49,7 +49,7 @@ function NoticeRegisterForm({ onRegister }: any ) {
                     <Link to="/notice">취소</Link>
                 </div>
             </form>
-        </div>
+        </article>
     )
 }
 

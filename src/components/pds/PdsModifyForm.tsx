@@ -33,7 +33,7 @@ function PdsModifyForm({ pdsItem, attachments, isLoading, onModify, onAddAttach,
     }, [pdsItem])
 
     return(
-        <div data-align="center">
+        <article>
             <h2>공개자료실 수정</h2>
             {isLoading && "로딩중..."}
             {!isLoading && pdsItem && (
@@ -85,7 +85,7 @@ function PdsModifyForm({ pdsItem, attachments, isLoading, onModify, onAddAttach,
                     </div>
                 </form>
             )}
-        </div>
+        </article>
     )
 }
 

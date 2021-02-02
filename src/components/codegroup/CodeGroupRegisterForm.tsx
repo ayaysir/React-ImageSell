@@ -28,7 +28,7 @@ function CodeGroupRegisterForm({
 
     // 코드그룹 등록 폼 화면 표시
     return (
-        <div data-align="center">
+        <article>
             <h2>코드그룹 등록</h2>
             <form onSubmit={handleSubmit}>
                 <table>
@@ -49,7 +49,7 @@ function CodeGroupRegisterForm({
                     <Link to="/codegroup">취소</Link>
                 </div>
             </form>
-        </div>
+        </article>
     )
 }
 export default CodeGroupRegisterForm

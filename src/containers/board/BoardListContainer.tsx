@@ -6,7 +6,7 @@ import { FETCH_LIST, fetchList } from "../../modules/board"
 const BoardListContainer = () => {
     const dispatch = useDispatch()
 
-    const { boards, isLoading } = useSelector(({ board, loading }: { board: any, loading: any}) => ({
+    const { boards, isLoading } = useSelector(({ board, loading }: any) => ({
         boards: board.boards,
         isLoading: loading[FETCH_LIST]
     }))

@@ -2,12 +2,12 @@ import React from "react"
 
 function CoinChargeList({ chargeCoins, isLoading }: any) {
     return (
-        <div data-align="center">
+        <article>
             <h2>충전 내역</h2>
             {isLoading && "로딩중..."}
             {!isLoading && chargeCoins && (
                 <>
-                    <table>
+                    <table className="table-board">
                         <thead>
                             <tr>
                                 <th align="center">번호</th>
@@ -33,7 +33,7 @@ function CoinChargeList({ chargeCoins, isLoading }: any) {
                     </table>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 

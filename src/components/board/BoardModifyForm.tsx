@@ -34,7 +34,7 @@ function BoardModifyForm({ board, isLoading, onModify, myInfo }: any ) {
     }, [board])
 
     return(
-        <div data-align="center">
+        <article>
             <h2>게시판 수정</h2>
             {isLoading && "로딩중..."}
             {!isLoading && board && (
@@ -86,7 +86,7 @@ function BoardModifyForm({ board, isLoading, onModify, myInfo }: any ) {
                     </div>
                 </form>
             )}
-        </div>
+        </article>
     )
 }
 

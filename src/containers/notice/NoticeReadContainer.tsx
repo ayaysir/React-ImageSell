@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { withRouter } from "react-router-dom"
-import { NoticeNNOProps } from "../../@types/BoardInfo"
+import { NoticeNNOProps } from "../../interfaces/BoardInfo"
 import NoticeRead from "../../components/notice/NoticeRead"
 import { removeNotice } from "../../lib/api"
 import { fetchOne, FETCH_ONE } from "../../modules/notice"

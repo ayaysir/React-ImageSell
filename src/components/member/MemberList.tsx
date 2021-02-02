@@ -1,16 +1,16 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { MemberListInfo } from "../../@types/MemberInfo"
+import { MemberListInfo } from "../../interfaces/MemberInfo"
 
 function MemberList({ members, isLoading }: MemberListInfo) {
     return (
-        <div data-align="center">
+        <article>
             <h2>회원 목록</h2>
             {isLoading && "로딩중..."}
             {!isLoading && members && (
                 <>
                     <Link to="/member/create">새로 만들기</Link>
-                    <table>
+                    <table className="table-board">
                         <thead>
                             <tr>
                                 <th align="center">번호</th>
@@ -45,7 +45,7 @@ function MemberList({ members, isLoading }: MemberListInfo) {
                     </table>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 

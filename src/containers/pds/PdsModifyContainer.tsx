@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { withRouter } from "react-router-dom"
-import { PdsIIDProps } from "../../@types/PdsInfo"
+import { PdsIIDProps } from "../../interfaces/PdsInfo"
 import PdsModifyForm from "../../components/pds/PdsModifyForm"
 import * as api from "../../lib/api"
 import { addAttach, fetchAttachList, fetchOne, FETCH_ONE, removeAttach, resetAttach } from "../../modules/pds"

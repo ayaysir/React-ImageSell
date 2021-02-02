@@ -36,7 +36,7 @@ function ItemRegisterForm({ onRegister }: any) {
 
 
     return (
-        <div data-align="center">
+        <article>
             <h2>상품 등록</h2>
             <form onSubmit={handleSubmit}>
                 <table>
@@ -76,7 +76,7 @@ function ItemRegisterForm({ onRegister }: any) {
                 </div>
             </form>
 
-        </div>
+        </article>
 
     )
 }

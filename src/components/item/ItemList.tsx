@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 function ItemList({ items, isLoading, isAdmin }: any) {
     return (
-        <div data-align="center">
+        <article>
             <h2>상품 목록</h2>
             {isLoading && "로딩중..."}
             {!isLoading && items && (
@@ -11,7 +11,7 @@ function ItemList({ items, isLoading, isAdmin }: any) {
                     {isAdmin && (
                         <Link to="/item/create">새로 만들기</Link>
                     )}
-                    <table>
+                    <table className="table-board">
                         <thead>
                             <tr>
                                 <th align="center">상품아이디</th>
@@ -28,7 +28,7 @@ function ItemList({ items, isLoading, isAdmin }: any) {
                                 </tr>
                             )}
                             {!!items.length && items.map((item: any) => (
-                                <tr>
+                                <tr key={item.itemId}>
                                     <td align="center">{item.itemId}</td>
                                     <td align="left">
                                         <Link to={`/item/read/${item.itemId}`}>{item.itemName}</Link>
@@ -40,7 +40,7 @@ function ItemList({ items, isLoading, isAdmin }: any) {
                     </table>
                 </>
             )}
-        </div>
+        </article>
         
     )
 }

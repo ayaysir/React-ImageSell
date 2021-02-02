@@ -20,7 +20,7 @@ function BoardRegisterForm({ onRegister }: any ) {
     }, [title, content, onRegister])
 
     return(
-        <div data-align="center">
+        <article>
             <h2>게시판 등록</h2>
             <form onSubmit={handleSubmit}>
                 <table>
@@ -49,7 +49,7 @@ function BoardRegisterForm({ onRegister }: any ) {
                     <Link to="/board">취소</Link>
                 </div>
             </form>
-        </div>
+        </article>
     )
 }
 

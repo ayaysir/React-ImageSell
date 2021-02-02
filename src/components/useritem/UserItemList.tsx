@@ -8,12 +8,12 @@ function UserItemList({ userItems, isLoading, onDownload }: any) {
     }, [onDownload])
 
     return(
-        <div data-align="center">
+        <article>
             <h2>구매상품 목록</h2>
             {isLoading && "로딩중..."}
             {!isLoading && userItems && (
                 <>
-                    <table>
+                    <table className="table-board">
                         <thead>
                             <tr>
                                 <th align="center">번호</th>
@@ -46,7 +46,7 @@ function UserItemList({ userItems, isLoading, onDownload }: any) {
                     </table>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 

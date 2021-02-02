@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FormEvent, useCallback } from "react"
+import React, { useState, useEffect, FormEvent, useCallback, ChangeEvent } from "react"
 import { Link } from "react-router-dom"
 import { fetchGroupCodeList } from "../../lib/api"
 
@@ -10,7 +10,7 @@ function CodeDetailModifyForm({
 }: {
     codeDetail: any;
     isLoading: boolean;
-    onModify: any
+    onModify: Function
 }) {
         // 컴포넌트 상태 설정
         const [groupCodes, setGroupCodes] = useState([])
@@ -18,8 +18,8 @@ function CodeDetailModifyForm({
         const [codeName, setCodeName] = useState("")
 
         // 코드명 값의 변경을 처리하는 함수
-        const handleChangeCodeName = (e: any) => {
-            setCodeName(e.target.value)
+        const handleChangeCodeName = (e: ChangeEvent) => {
+            setCodeName((e.target as HTMLInputElement).value)
         }
 
         // 폼 submit 이벤트 처리
@@ -55,7 +55,7 @@ function CodeDetailModifyForm({
 
         // 코드 수정 폼 표시
         return (
-            <div data-align="center"> 
+            <article> 
                 <h2>코드 수정</h2>
                 {isLoading && "...로딩중"}
                 {!isLoading && codeDetail && (
@@ -93,7 +93,7 @@ function CodeDetailModifyForm({
                         </div>
                     </form>
                 )}
-            </div>
+            </article>
         )
 }
 

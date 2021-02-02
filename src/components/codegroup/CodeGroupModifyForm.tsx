@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FormEvent } from "react"
+import React, { useState, useEffect, FormEvent, ChangeEvent } from "react"
 import { Link } from "react-router-dom"
 
 // 부모 컴포넌트에서 컴포넌트 속성으로 수신
@@ -15,8 +15,8 @@ function CodeGroupModifyForm({
         const [groupName, setGroupName] = useState("")
 
         // 코드그룹명 값의 변경을 처리하는 함수
-        const handleChangeGroupName = (e: any) => {
-            setGroupName(e.target.value)
+        const handleChangeGroupName = (e: ChangeEvent) => {
+            setGroupName((e.target as HTMLInputElement).value)
         }
 
         // 폼 submit 이벤트 처리
@@ -34,7 +34,7 @@ function CodeGroupModifyForm({
 
         // 코드그룹 수정 폼 표시
         return (
-            <div data-align="center"> 
+            <article> 
                 <h2>코드그룹 수정</h2>
                 {isLoading && "...로딩중"}
                 {!isLoading && codeGroup && (
@@ -62,7 +62,7 @@ function CodeGroupModifyForm({
                         </div>
                     </form>
                 )}
-            </div>
+            </article>
         )
 }
 

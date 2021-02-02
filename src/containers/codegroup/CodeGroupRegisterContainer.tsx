@@ -1,10 +1,10 @@
 import React from "react"
-import { withRouter } from "react-router-dom"
+import { RouteComponentProps, withRouter } from "react-router-dom"
 import CodeGroupRegisterForm from "../../components/codegroup/CodeGroupRegisterForm"
 
 import * as api from "../../lib/api"
 
-const CodeGroupRegisterContainer = ({ history }: { history: any}) => {
+const CodeGroupRegisterContainer = ({ history }: RouteComponentProps<any>) => {
 
     // 등록 처리
     const onRegister = async (groupCode: any, groupName: any) => {

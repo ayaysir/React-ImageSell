@@ -6,7 +6,7 @@ import MenuBarContainer from "../containers/common/MenuBarContainer"
 function MainLayout({ children }: { children: any }) {
     // console.log(typeof children)
     return (
-        <div data-align="center">
+        <div className="container">
             <MainHeaderContainer />
             <MenuBarContainer />
             {children}

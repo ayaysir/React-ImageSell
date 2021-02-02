@@ -8,7 +8,7 @@ export interface MemberListInfo extends MemberInfo {
     members: any
 }
 
-export interface MemberModifyInfo extends MemberInfo{
+export interface MemberModifyInfo extends MemberInfo {
     member: any
     onModify: any    
 }

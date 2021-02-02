@@ -4,19 +4,16 @@ import { withRouter } from "react-router-dom"
 import { fetchOne, FETCH_ONE } from "../../modules/codedetail"
 
 import * as api from "../../lib/api"
-import { CodeDetailComponentProps } from "../../@types/ComponentProps"
-import { RootState } from "../../modules"
+import { CodeDetailComponentProps } from "../../interfaces/ComponentProps"
 import CodeDetailRead from "../../components/codedetail/CodeDetailRead"
 
 const CodeDetailReadContainer = ({ groupCode, codeValue, history }: CodeDetailComponentProps) => {
     // 스토어 dispatch 사용 가능
     const dispatch = useDispatch()
-    const loading: any = useSelector((state: RootState) => state.loading)
 
     // 스토어 상태 조회
     const { codeDetail, isLoading } = useSelector(
-        ({ codeDetail, isLoading }:
-            { codeDetail: any; isLoading: boolean }) => ({
+        ({ codeDetail, loading }: any) => ({
                 codeDetail: codeDetail.codeDetail,
                 isLoading: loading[FETCH_ONE]
             })

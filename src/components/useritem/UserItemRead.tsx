@@ -10,7 +10,7 @@ const pictureUrl = (userItem: any) => {
 function UserItemRead({ userItem, isLoading }: any ) {
 
     return(
-        <div data-align="center">
+        <article>
             <h2>구매상품 상세보기</h2>
             {isLoading && "로딩중..."}
             {!isLoading && userItem && (
@@ -54,7 +54,7 @@ function UserItemRead({ userItem, isLoading }: any ) {
                     </div>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 

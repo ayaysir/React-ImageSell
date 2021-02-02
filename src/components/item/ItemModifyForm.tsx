@@ -43,7 +43,7 @@ function ItemModifyForm({ item, isLoading, onModify }: any) {
     }, [item])
 
     return (
-        <div data-align="center">
+        <article>
             <h2>상품 수정</h2>
             {isLoading && "로딩중..."}
             {!isLoading && item && (
@@ -89,7 +89,7 @@ function ItemModifyForm({ item, isLoading, onModify }: any) {
                     </div>
                 </form>
             )}
-        </div>
+        </article>
 
     )
 }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 function NoticeRead({ notice, isLoading, noticeNo, onRemove, isAdmin }: any ) {
 
     return(
-        <div data-align="center">
+        <article>
             <h2>공지사항 상세보기</h2>
             {isLoading && "로딩중..."}
             {!isLoading && notice && (
@@ -47,7 +47,7 @@ function NoticeRead({ notice, isLoading, noticeNo, onRemove, isAdmin }: any ) {
                     </div>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 

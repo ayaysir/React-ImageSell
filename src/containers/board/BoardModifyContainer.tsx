@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { withRouter } from "react-router-dom"
-import { BoardBNOProps } from "../../@types/BoardInfo"
+import { BoardBNOProps } from "../../interfaces/BoardInfo"
 import BoardModifyForm from "../../components/board/BoardModifyForm"
 import { modifyBoard } from "../../lib/api"
 import { fetchOne, FETCH_ONE } from "../../modules/board"

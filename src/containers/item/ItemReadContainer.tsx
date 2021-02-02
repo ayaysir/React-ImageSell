@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { withRouter } from "react-router-dom"
-import { ItemIIDProps } from "../../@types/ItemInfo"
+import { ItemIIDProps } from "../../interfaces/ItemInfo"
 import * as api from "../../lib/api"
 import { fetchOne, FETCH_ONE } from "../../modules/item"
 import httpStatusHandler from "../../util/httpStatusHandler"

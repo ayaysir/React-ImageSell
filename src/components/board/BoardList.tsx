@@ -3,13 +3,13 @@ import { Link } from "react-router-dom"
 function BoardList({ boards, isLoading }: any ) {
 
     return(
-        <div data-align="center">
+        <article>
             <h2>게시판 목록</h2>
             {isLoading && "로딩중..."}
             {!isLoading && boards && (
                 <>
                     <Link to="/board/create">새로만들기</Link>
-                    <table>
+                    <table className="table-board">
                         <thead>
                             <tr>
                                 <th align="center">번호</th>
@@ -30,7 +30,7 @@ function BoardList({ boards, isLoading }: any ) {
                                     <td align="left">
                                         <Link to={`/board/read/${board.boardNo}`}>{board.title}</Link>
                                     </td>
-                                    <td align="right">{board.writer}</td>
+                                    <td align="center">{board.writer}</td>
                                     <td align="center">{board.regDate}</td>
                                 </tr>
                             ))}
@@ -38,7 +38,7 @@ function BoardList({ boards, isLoading }: any ) {
                     </table>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 

@@ -16,7 +16,7 @@ function CodeGroupRead({
 
     // 코드그룹 상세보기 화면 표시
     return (
-        <div data-align="center">
+        <article>
             <h2>코드그룹 상세 보기</h2>
             {isLoading && "...로딩중..."}
             {!isLoading && codeGroup && (
@@ -43,7 +43,7 @@ function CodeGroupRead({
                     <Link to={`/codegroup/`}>목록</Link>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 export default CodeGroupRead

@@ -3,13 +3,13 @@ import { Link } from "react-router-dom"
 function PdsList({ pdsItems, isLoading, isAdmin }: any) {
 
     return(
-        <div data-align="center">
+        <article>
             <h2>공개자료실 목록</h2>
             {isLoading && "로딩중..."}
             {!isLoading && pdsItems && (
                 <>
                     {isAdmin && <Link to="/pds/create">새로만들기</Link>}
-                    <table>
+                    <table className="table-board">
                         <thead>
                             <tr>
                                 <th align="center">자료번호</th>
@@ -24,7 +24,7 @@ function PdsList({ pdsItems, isLoading, isAdmin }: any) {
                                 </tr>
                             )}
                             {!!pdsItems.length && pdsItems.map((pdsItem: any) => (
-                                <tr key={pdsItem.boardNo}>
+                                <tr key={pdsItem.itemId}>
                                     <td align="center">{pdsItem.itemId}</td>
                                     <td align="left">
                                         <Link to={`/pds/read/${pdsItem.itemId}`}>{pdsItem.itemName}</Link>
@@ -36,7 +36,7 @@ function PdsList({ pdsItems, isLoading, isAdmin }: any) {
                     </table>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 

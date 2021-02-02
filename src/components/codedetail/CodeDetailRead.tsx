@@ -37,10 +37,10 @@ function CodeDetailRead({
 
     // 코드 상세보기 화면 표시
     return (
-        <div data-align="center">
+        <article>
             <h2>코드 상세 보기</h2>
             {isLoading && "...로딩중..."}
-            {console.log(codeDetail)}
+            {/* {console.log(codeDetail)} */}
             {!isLoading && codeDetail && (
                 <>
                     <table>
@@ -75,7 +75,7 @@ function CodeDetailRead({
                     <Link to={`/codedetail/`}>목록</Link>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 export default CodeDetailRead

@@ -9,7 +9,7 @@ function BoardRead({ board, isLoading, boardNo, onRemove, myInfo }: any ) {
     }
 
     return(
-        <div data-align="center">
+        <article>
             <h2>게시판 상세보기</h2>
             {isLoading && "로딩중..."}
             {!isLoading && board && (
@@ -59,7 +59,7 @@ function BoardRead({ board, isLoading, boardNo, onRemove, myInfo }: any ) {
                     </div>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 

@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect, FormEvent } from "react"
 import { Link } from "react-router-dom"
 import { fetchJobCodeList } from "../../lib/api"
 
-function SignUpForm({ onSignUp }: { onSignUp: any }) {
+function SignUpForm({ onSignUp }: { onSignUp: Function }) {
     // 컴포넌트 상태 설정
     const [userId, setUserId] = useState("")
     const [password, setPassword] = useState("")
@@ -11,19 +11,19 @@ function SignUpForm({ onSignUp }: { onSignUp: any }) {
     const [jobCodes, setJobCodes] = useState([])
 
     // 회원정보 변경을 처리하는 함수
-    const handleChangeUserId = useCallback((e: any) => {
+    const handleChangeUserId = useCallback((e) => {
         setUserId(e.target.value)
     }, [])
 
-    const handleChangePassword = useCallback((e: any) => {
+    const handleChangePassword = useCallback((e) => {
         setPassword(e.target.value)
     }, [])
 
-    const handleChangeUserName = useCallback((e: any) => {
+    const handleChangeUserName = useCallback((e) => {
         setUserName(e.target.value)
     }, [])
 
-    const handleChangeJob = useCallback((e: any) => {
+    const handleChangeJob = useCallback((e) => {
         setJob(e.target.value)
     }, [])
 
@@ -49,7 +49,7 @@ function SignUpForm({ onSignUp }: { onSignUp: any }) {
     }, [])
 
     return (
-        <div data-align="center">
+        <article>
             <h2>회원가입</h2>
             <form onSubmit={handleSubmit}>
                 <table>
@@ -104,7 +104,7 @@ function SignUpForm({ onSignUp }: { onSignUp: any }) {
             </form>
 
             <p><Link to="/signin">로그인</Link></p>
-        </div>
+        </article>
     )
 }
 

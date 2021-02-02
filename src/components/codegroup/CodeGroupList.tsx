@@ -5,13 +5,13 @@ import { Link } from "react-router-dom"
 function CodeGroupList({ codeGroups, isLoading }: { codeGroups: Array<any>; isLoading: boolean }) {
     // 코드그룹 목록 화면 표시
     return (
-        <div> {/* align center */}
+        <article> {/* align center */}
             <h2>코드그룹 목록</h2>
             {isLoading && "로딩중"}
             {!isLoading && codeGroups && (
                 <>
                     <Link to="/codegroup/create">새로만들기</Link>
-                    <table>
+                    <table className="table-board">
                         <thead>
                             <tr>
                                 <th align="center">코드그룹코드</th>
@@ -40,7 +40,7 @@ function CodeGroupList({ codeGroups, isLoading }: { codeGroups: Array<any>; isLo
                     </table>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 

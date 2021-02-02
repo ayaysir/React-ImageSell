@@ -26,7 +26,7 @@ function PdsRegisterForm({ attachments, onRegister, onAddAttach, onRemoveAttach 
     }, [itemName, description, onRegister])
 
     return (
-        <div data-align="center">
+        <article>
             <h2>공개자료실 등록</h2>
             <form onSubmit={handleSubmit}>
                 <table>
@@ -69,7 +69,7 @@ function PdsRegisterForm({ attachments, onRegister, onAddAttach, onRemoveAttach 
                     <Link to="/pds">취소</Link>
                 </div>
             </form>
-        </div>
+        </article>
     )
 }
 

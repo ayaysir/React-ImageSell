@@ -1,7 +1,7 @@
 
-import React, { FormEvent, useEffect, useState } from "react"
+import React, { ChangeEvent, FormEvent, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { MemberModifyInfo } from "../../@types/MemberInfo"
+import { MemberModifyInfo } from "../../interfaces/MemberInfo"
 import { fetchJobCodeList } from "../../lib/api"
 
 function MemberModifyForm({ member, isLoading, onModify }: MemberModifyInfo) {
@@ -15,25 +15,25 @@ function MemberModifyForm({ member, isLoading, onModify }: MemberModifyInfo) {
     const [auth2, setAuth2] = useState("")
     const [auth3, setAuth3] = useState("")
 
-    const handleChangeUserName = (e: any) => {
-        setUserName(e.target.value)
+    const handleChangeUserName = (e: ChangeEvent) => {
+        setUserName((e.target as HTMLInputElement).value)
     }
 
-    const handleChangeJob = (e: any) => {
-        setJob(e.target.value)
+    const handleChangeJob = (e: ChangeEvent) => {
+        setJob((e.target as HTMLInputElement).value)
     }
 
     // 사용자 권한의 변경을 처리하는 함수
-    const handleChangeAuth1 = (e: any) => {
-        setAuth1(e.target.value)
+    const handleChangeAuth1 = (e: ChangeEvent) => {
+        setAuth1((e.target as HTMLInputElement).value)
     }
 
-    const handleChangeAuth2 = (e: any) => {
-        setAuth2(e.target.value)
+    const handleChangeAuth2 = (e: ChangeEvent) => {
+        setAuth2((e.target as HTMLInputElement).value)
     }
 
-    const handleChangeAuth3 = (e: any) => {
-        setAuth3(e.target.value)
+    const handleChangeAuth3 = (e: ChangeEvent) => {
+        setAuth3((e.target as HTMLInputElement).value)
     }
 
     const handleSubmit = (e: FormEvent) => {
@@ -91,7 +91,7 @@ function MemberModifyForm({ member, isLoading, onModify }: MemberModifyInfo) {
     }, [member])
 
     return (
-        <div data-align="center">
+        <article>
             <h2>회원 목록</h2>
             {isLoading && "로딩중..."}
             {!isLoading && member && (
@@ -168,7 +168,7 @@ function MemberModifyForm({ member, isLoading, onModify }: MemberModifyInfo) {
                     </div>
                 </form>
             )}
-        </div>
+        </article>
     )
 }
 

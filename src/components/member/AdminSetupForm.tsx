@@ -32,7 +32,7 @@ function AdminSetupForm({ onRegister }: { onRegister: Function }) {
 
     // 회원등록 폼 화면 표시
     return(
-        <div> {/* align center */}
+        <article> {/* align center */}
             <h2>최초관리자 등록</h2>
 
             <form onSubmit={handleSubmit}>
@@ -74,7 +74,7 @@ function AdminSetupForm({ onRegister }: { onRegister: Function }) {
                     <button type="submit">등록</button>
                 </div>
             </form>
-        </div>
+        </article>
     )
 
 }

@@ -50,7 +50,7 @@ function CodeDetailRegisterForm({
 
     // 코드 등록 폼 화면 표시
     return (
-        <div data-align="center">
+        <article>
             <h2>코드 등록</h2>
             <form onSubmit={handleSubmit}>
                 <table>
@@ -81,7 +81,7 @@ function CodeDetailRegisterForm({
                     <Link to="/codedetail">취소</Link>
                 </div>
             </form>
-        </div>
+        </article>
     )
 }
 export default CodeDetailRegisterForm

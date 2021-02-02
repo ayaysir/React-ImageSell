@@ -4,7 +4,7 @@ import { getDownloadURL, getOriginalFileName } from "./PdsUtil"
 function PdsRead({ pdsItem, attachments, isLoading, itemId, onRemove, isAdmin }: any ) {
 
     return(
-        <div data-align="center">
+        <article>
             <h2>공개자료실 상세보기</h2>
             {isLoading && "로딩중..."}
             {!isLoading && pdsItem && (
@@ -54,7 +54,7 @@ function PdsRead({ pdsItem, attachments, isLoading, itemId, onRemove, isAdmin }:
                     </div>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 

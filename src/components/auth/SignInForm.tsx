@@ -20,7 +20,7 @@ function SignInForm({ onSignIn }: { onSignIn: Function }) {
     }, [userId, password, onSignIn])
 
     return (
-        <div> {/*  align="center" */}
+        <article> {/*  align="center" */}
             <h2>로그인</h2>
             <form onSubmit={handleSubmit}>
                 <table>
@@ -47,7 +47,7 @@ function SignInForm({ onSignIn }: { onSignIn: Function }) {
             </form>
             {/* 회원가입 링크 */}
             <p><Link to="/signup">회원가입</Link></p>
-        </div>
+        </article>
     )
 }
 

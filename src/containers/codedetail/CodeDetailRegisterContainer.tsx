@@ -1,13 +1,13 @@
 import React from "react"
-import { withRouter } from "react-router-dom"
+import { RouteComponentProps, withRouter } from "react-router-dom"
 import CodeDetailRegisterForm from "../../components/codedetail/CodeDetailRegisterForm"
 
 import * as api from "../../lib/api"
 
-const CodeDetailRegisterContainer = ({ history }: { history: any }) => {
+const CodeDetailRegisterContainer = ({ history }: RouteComponentProps<any>) => {
 
     // 등록 처리
-    const onRegister = async (groupCode: any, codeValue: any, codeName: any) => {
+    const onRegister = async (groupCode: string, codeValue: string, codeName: string) => {
         try {
             const response = await api.writeCodeDetail(groupCode, codeValue, codeName)
             alert("등록이 완료되었습니다.")

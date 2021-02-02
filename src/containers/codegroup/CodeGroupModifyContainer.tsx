@@ -4,18 +4,15 @@ import { withRouter } from "react-router-dom"
 import CodeGroupModifyForm from "../../components/codegroup/CodeGroupModifyForm"
 import { fetchOne, FETCH_ONE } from "../../modules/codegroup"
 import * as api from "../../lib/api"
-import { RouteComponentPropsWithGroupCode } from "../../@types/ComponentProps"
-import { RootState } from "../../modules"
+import { RouteComponentPropsWithGroupCode } from "../../interfaces/ComponentProps"
 
 const CodeGroupModifyContainer = ({ groupCode, history }: RouteComponentPropsWithGroupCode) => {
     // 스토어 dispatch 사용 가능
     const dispatch = useDispatch()
-    const loading: any = useSelector((state: RootState) => state.loading)
 
     // 스토어 상태 조회
     const { codeGroup, isLoading } = useSelector(
-        ({ codeGroup, isLoading }:
-            { codeGroup: any; isLoading: boolean }) => ({
+        ({ codeGroup, loading }: any) => ({
                 codeGroup: codeGroup.codeGroup,
                 isLoading: loading[FETCH_ONE]
             })

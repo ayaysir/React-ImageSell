@@ -2,7 +2,7 @@ import React from "react"
 
 function CoinPayList({ payCoins, isLoading }: any) {
     return (
-        <div data-align="center">
+        <article>
             <h2>구매 내역</h2>
             {isLoading && "로딩중..."}
             {!isLoading && payCoins && (
@@ -34,7 +34,7 @@ function CoinPayList({ payCoins, isLoading }: any) {
                     </table>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 

@@ -30,6 +30,10 @@ import NoticeListPage from "./pages/notice/NoticeListPage";
 import NoticeModifyPage from "./pages/notice/NoticeModifyPage";
 import NoticeReadPage from "./pages/notice/NoticeReadPage";
 import NoticeRegisterPage from "./pages/notice/NoticeRegisterPage";
+import PdsListPage from "./pages/pds/PdsListPage";
+import PdsModifyPage from "./pages/pds/PdsModifyPage";
+import PdsReadPage from "./pages/pds/PdsReadPage";
+import PdsRegisterPage from "./pages/pds/PdsRegisterPage";
 import UserItemListPage from "./pages/useritem/UserItemListPage";
 
 function App() {
@@ -76,6 +80,11 @@ function App() {
 
       <Route component={UserItemListPage} path="/useritem" />
       <Route component={CoinPayListPage} path="/coin/pay" />
+
+      <Route component={PdsListPage} path="/pds" exact />
+      <Route component={PdsRegisterPage} path="/pds/create" />
+      <Route component={PdsModifyPage} path="/pds/edit/:itemId" />
+      <Route component={PdsReadPage} path="/pds/read/:itemId" />
 
     </>
 

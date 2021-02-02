@@ -96,3 +96,20 @@ export const buyItem = (itemId: number) => client.get(`/items/buy/${itemId}`)
 export const fetchUserItem = (userItemNo: number) => client.get(`/useritems/${userItemNo}`)
 export const fetchUserItemList = () => client.get(`/useritems/`)
 export const downloadUserItem = (userItemNo: number) => client.get(`/useritems/download/${userItemNo}`, {responseType: 'blob'})
+
+// 공개자료실
+export const fetchPds = (itemId: number) => client.get(`/pds/${itemId}`)
+export const fetchPdsList = () => client.get("/pds")
+export const modifyPds = (itemId: number, itemObject: any) => client.put(`/pds/${itemId}/`, itemObject)
+export const writePds = (itemObject: any) => client.post(`/pds`, itemObject)
+export const removePds = (itemId: number) => client.delete(`/pds/${itemId}`)
+
+// 공개자료 첨부파일 업로드 API 호출 함수
+export const addAttach = (formData: FormData) => client.post(`/pds/upload`, formData, {
+    headers: {
+        'Content-Type': 'multipart/form-data'
+    }
+})
+
+// 공개자료 첨부파일 목록 조회 API 호출 함수
+export const fetchAttachList = (itemId: number) => client.get(`/pds/attach/${itemId}`)

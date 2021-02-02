@@ -10,6 +10,7 @@ import notice, { noticeSaga } from "./notice"
 import item, { itemSaga } from "./item"
 import coin, { coinSaga } from "./coin"
 import useritem, { userItemSaga } from "./useritem"
+import pds, { pdsSaga } from "./pds"
 
 // 루트 리듀서
 const rootReducer = combineReducers({
@@ -22,7 +23,8 @@ const rootReducer = combineReducers({
     notice,
     item,
     coin,
-    useritem
+    useritem,
+    pds
 })
 
 // 루트 사가
@@ -36,7 +38,8 @@ export function* rootSaga() {
         noticeSaga(),
         itemSaga(),
         coinSaga(),
-        userItemSaga()
+        userItemSaga(),
+        pdsSaga()
     ])
 }
 

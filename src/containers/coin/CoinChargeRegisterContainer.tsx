@@ -6,6 +6,13 @@ import httpStatusHandler from "../../util/httpStatusHandler"
 const CoinChargeRegisterContainer = ({ history }: RouteComponentProps<any>) => {
     
     const onRegister = async (amount: string) => {
+        // 10만원까지만
+        const amountNumber = Number(amount)
+        if(amountNumber > 100000) {
+            alert("최대 10만원까지 충전 가능합니다.")
+            return
+        }
+
         try {
             const response = await chargeCoin(Number(amount))
             alert(response.data)

@@ -31,7 +31,7 @@ function NoticeRead({ notice, isLoading, noticeNo, onRemove, isAdmin }: any ) {
                             <tr>
                                 <td>내용</td>
                                 <td>
-                                    <textarea value={notice.noticeNo} readOnly></textarea>
+                                    <textarea value={notice.content} readOnly rows={5}></textarea>
                                 </td>
                             </tr>
                         </tbody>

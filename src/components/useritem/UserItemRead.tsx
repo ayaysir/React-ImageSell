@@ -38,7 +38,7 @@ function UserItemRead({ userItem, isLoading }: any ) {
                             <tr>
                                 <td>상품파일</td>
                                 <td>
-                                    <img src={pictureUrl(userItem)} alt=""/>
+                                    <img src={pictureUrl(userItem)} alt="" width={200}/>
                                 </td>
                             </tr>
                             <tr>

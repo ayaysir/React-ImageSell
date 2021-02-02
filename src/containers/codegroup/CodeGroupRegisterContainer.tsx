@@ -11,7 +11,8 @@ const CodeGroupRegisterContainer = ({ history }: RouteComponentProps<any>) => {
         try {
             const response = await api.writeCodeGroup(groupCode, groupName)
             alert("등록이 완료되었습니다.")
-            history.push(`/codegroup/read/${response.data.codeGroup}`)
+            console.log("codegroup response", response)
+            history.push(`/codegroup/read/${response.data.groupCode}`)
         } catch(err) {
             if(err.response.status === 400) {
                 alert("잘못된 요청입니다.")

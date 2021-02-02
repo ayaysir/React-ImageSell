@@ -35,6 +35,7 @@ import PdsModifyPage from "./pages/pds/PdsModifyPage";
 import PdsReadPage from "./pages/pds/PdsReadPage";
 import PdsRegisterPage from "./pages/pds/PdsRegisterPage";
 import UserItemListPage from "./pages/useritem/UserItemListPage";
+import UserItemReadPage from "./pages/useritem/UserItemReadPage";
 
 function App() {
   return (
@@ -78,7 +79,8 @@ function App() {
       <Route component={CoinChargeListPage} path="/coin/charge" />
       <Route component={CoinChargeRegisterPage} path="/coin/create" />
 
-      <Route component={UserItemListPage} path="/useritem" />
+      <Route component={UserItemListPage} path="/useritem" exact />
+      <Route component={UserItemReadPage} path="/useritem/read/:userItemNo" />
       <Route component={CoinPayListPage} path="/coin/pay" />
 
       <Route component={PdsListPage} path="/pds" exact />

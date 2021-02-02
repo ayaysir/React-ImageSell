@@ -6,17 +6,6 @@ import { writeNotice } from "../../lib/api"
 import httpStatusHandler from "../../util/httpStatusHandler"
 
 const NoticeRegisterContainer = ({ history }: any) => {
-
-    // const { myInfo } = useSelector(({ auth }: any) => ({
-    //     myInfo: auth.myInfo
-    // }))
-
-    // useEffect(() => {
-    //     if(myInfo === null) {
-    //         alert("로그인이 필요합니다.")
-    //         history.push("/signin")
-    //     }
-    // }, [history, myInfo])
     
     const onRegister = async (title: string, content: string) => {
         try {

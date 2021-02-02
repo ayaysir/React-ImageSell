@@ -44,8 +44,8 @@ function PdsRegisterForm({ attachments, onRegister, onAddAttach, onRemoveAttach 
                                 <div>
                                     {attachments.map((attachment: string, index: number) => (
                                         <div key={index}>
-                                            {getOriginalFileName(attachment)}
-                                            <span onClick={() => removeAttach(index, onRemoveAttach)}>X</span>
+                                            {getOriginalFileName(attachment)}&nbsp;
+                                            <span className="btn-cancel" onClick={() => removeAttach(index, onRemoveAttach)}>X</span>
                                         </div>
                                     ))}
                                 </div>

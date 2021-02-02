@@ -30,7 +30,7 @@ function UserItemList({ userItems, isLoading, onDownload }: any) {
                                 </tr>
                             )}
                             {!!userItems.length && userItems.map((userItem: any) => (
-                                <tr>
+                                <tr key={userItem.userItemNo}>
                                     <td align="center">
                                         {userItem.userItemNo}
                                     </td>
@@ -38,7 +38,7 @@ function UserItemList({ userItems, isLoading, onDownload }: any) {
                                     <td align="right">{userItem.price}</td>
                                     <td align="center">{userItem.regDate}</td>
                                     <td align="center">
-                                        <span onClick={() => handleClickDownload(userItem.userItemNo)}>DOWNLOAD</span>
+                                        <span className="btn-download" onClick={() => handleClickDownload(userItem.userItemNo)}>DOWNLOAD</span>
                                     </td>
                                 </tr>
                             ))}

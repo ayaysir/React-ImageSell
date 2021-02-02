@@ -32,7 +32,7 @@ function ItemRead({ item, isLoading, itemId, onRemove, isAdmin, onBuy }: any) {
                             </tr>
                             <tr>
                                 <td>미리보기파일</td>
-                                <td><img src={previewUrl(item.itemId)} alt=""/></td>
+                                <td><img src={previewUrl(item.itemId)} alt="" width={200}/></td>
                             </tr>
                             <tr>
                                 <td>상품설명</td>

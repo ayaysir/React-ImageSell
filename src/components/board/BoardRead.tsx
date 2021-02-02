@@ -43,7 +43,7 @@ function BoardRead({ board, isLoading, boardNo, onRemove, myInfo }: any ) {
                             <tr>
                                 <td>내용</td>
                                 <td>
-                                    <textarea value={board.boardNo} readOnly></textarea>
+                                    <textarea value={board.content} readOnly></textarea>
                                 </td>
                             </tr>
                         </tbody>

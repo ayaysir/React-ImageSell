@@ -29,7 +29,7 @@ function PdsList({ pdsItems, isLoading, isAdmin }: any) {
                                     <td align="left">
                                         <Link to={`/pds/read/${pdsItem.itemId}`}>{pdsItem.itemName}</Link>
                                     </td>
-                                    <td align="right">{pdsItem.viewCnt}</td>
+                                    <td align="center">{pdsItem.viewCnt}</td>
                                 </tr>
                             ))}
                         </tbody>

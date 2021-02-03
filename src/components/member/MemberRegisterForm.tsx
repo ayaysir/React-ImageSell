@@ -95,8 +95,8 @@ function MemberRegisterForm({ onRegister }: MemberRegisterInfo) {
                 </table>
 
                 <div>
-                    <button type="submit">등록</button>
-                    <Link to="/member">취소</Link>
+                    <button type="submit" className="likebutton success">등록</button>
+                    <Link to="/member" className="likebutton">취소</Link>
                 </div>
             </form>
 

@@ -38,9 +38,9 @@ function CodeGroupRead({
                         </tbody>
                     </table>
 
-                    <Link to={`/codegroup/edit/${groupCode}`}>편집</Link>
-                    <button onClick={onRemove}>삭제</button>
-                    <Link to={`/codegroup/`}>목록</Link>
+                    <Link to={`/codegroup/edit/${groupCode}`} className="likebutton">편집</Link>
+                    <button onClick={onRemove} className="likebutton danger">삭제</button>
+                    <Link to={`/codegroup/`} className="likebutton">목록</Link>
                 </>
             )}
         </article>

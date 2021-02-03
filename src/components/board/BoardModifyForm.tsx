@@ -80,9 +80,9 @@ function BoardModifyForm({ board, isLoading, onModify, myInfo }: any ) {
 
                     <div>
                         {isOwn && (
-                            <button type="submit">수정</button>
+                            <button type="submit" className="likebutton">수정</button>
                         )}
-                        <Link to={`/board/read/${board.boardNo}`}>취소</Link>
+                        <Link to={`/board/read/${board.boardNo}`} className="likebutton">취소</Link>
                     </div>
                 </form>
             )}

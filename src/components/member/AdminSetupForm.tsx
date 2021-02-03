@@ -71,7 +71,7 @@ function AdminSetupForm({ onRegister }: { onRegister: Function }) {
                     </tbody>
                 </table>
                 <div>
-                    <button type="submit">등록</button>
+                    <button type="submit" className="likebutton success">등록</button>
                 </div>
             </form>
         </article>

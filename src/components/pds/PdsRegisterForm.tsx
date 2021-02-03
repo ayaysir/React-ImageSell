@@ -65,8 +65,8 @@ function PdsRegisterForm({ attachments, onRegister, onAddAttach, onRemoveAttach 
                 </table>
 
                 <div>
-                    <button type="submit">등록</button>
-                    <Link to="/pds">취소</Link>
+                    <button type="submit" className="likebutton success">등록</button>
+                    <Link to="/pds" className="likebutton">취소</Link>
                 </div>
             </form>
         </article>

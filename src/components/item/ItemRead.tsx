@@ -1,11 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import packageJson from "../../../package.json"
 
 // 미리보기 이미지 URL 생성
 const previewUrl = (itemId: any) => {
-    return (
-        `/items/preview?itemId=${itemId}&timestamp=${new Date().getTime()}`
-    )
+    const url = `${packageJson.proxy}/items/preview?itemId=${itemId}&timestamp=${new Date().getTime()}`
+    return url
 }
 
 function ItemRead({ item, isLoading, itemId, onRemove, isAdmin, onBuy }: any) {
@@ -28,7 +28,7 @@ function ItemRead({ item, isLoading, itemId, onRemove, isAdmin, onBuy }: any) {
                             </tr>
                             <tr>
                                 <td>상품가격</td>
-                                <td><input type="text" value={item.price} readOnly /></td>
+                                <td><input type="text" value={item.price.toLocaleString( 'ko-KR', { style: 'currency', currency: 'KRW' })} readOnly /></td>
                             </tr>
                             <tr>
                                 <td>미리보기파일</td>
@@ -49,12 +49,12 @@ function ItemRead({ item, isLoading, itemId, onRemove, isAdmin, onBuy }: any) {
 
                     {isAdmin && (
                         <>
-                            <Link to={`/item/edit/${itemId}`}>편집</Link>
-                            <button onClick={onRemove}>삭제</button>
+                            <Link to={`/item/edit/${itemId}`} className="likebutton">편집</Link>
+                            <button onClick={onRemove} className="likebutton danger">삭제</button>
                         </>
                     )}
-                    {!isAdmin && <button onClick={onBuy}>구매</button>}
-                    <Link to="/item">목록</Link>
+                    {!isAdmin && <button onClick={onBuy} className="likebutton success">구매</button>}
+                    <Link to="/item" className="likebutton">목록</Link>
                 </>
             )}
         </article>

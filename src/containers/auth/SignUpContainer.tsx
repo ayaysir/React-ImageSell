@@ -4,7 +4,26 @@ import { signUp } from "../../lib/api";
 
 const SignUpContainer = ({ history }: RouteComponentProps<any>) => {
     // 등록 처리
-    const onSignUp = async (userId: string, userName: string, password: string, job: string) => {
+    const onSignUp = async (userId: string, userName: string, password: string, confirmPassword: string, job: string) => {
+
+        // 유효성 검사
+        if(!userId) {
+            alert("아이디를 입력해야 합니다.")
+            return
+        }
+        if(!userName) {
+            alert("이름을 입력해야 합니다.")
+            return
+        }
+        if(!password) {
+            alert("비밀번호를 입력해야 합니다.")
+            return
+        }
+        if(password !== confirmPassword) {
+            alert("비밀번호와 비밀번호 확인란은 일치해야 합니다.")
+            return
+        }
+
         try {
             await signUp(userId, userName, password, job)
             alert("회원가입이 완료되었습니다.")

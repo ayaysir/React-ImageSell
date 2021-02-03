@@ -46,11 +46,11 @@ function PdsRead({ pdsItem, attachments, isLoading, itemId, onRemove, isAdmin }:
                     <div>
                         {isAdmin && (
                             <>
-                                <Link to={`/pds/edit/${itemId}`}>편집</Link>
-                                <button onClick={onRemove}>삭제</button>
+                                <Link to={`/pds/edit/${itemId}`} className="likebutton">편집</Link>
+                                <button onClick={onRemove} className="likebutton danger">삭제</button>
                             </>
                         )}
-                        <Link to={`/pds`}>목록</Link>
+                        <Link to={`/pds`} className="likebutton">목록</Link>
                     </div>
                 </>
             )}

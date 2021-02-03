@@ -9,7 +9,7 @@ function CodeDetailRegisterForm({
     onRegister: any
 }) {
     // 컴포넌트 상태 설정
-    const [groupCode, setGroupCode] = useState("")
+    const [groupCode, setGroupCode] = useState("nnn")
     const [groupCodes, setGroupCodes] = useState([])
     const [codeValue, setCodeValue] = useState("")
     const [codeName, setCodeName] = useState("")
@@ -37,8 +37,12 @@ function CodeDetailRegisterForm({
     const getGroupCodeList = async () => {
         try {
             const response = await fetchGroupCodeList()
+            response.data.unshift({
+                value: "nnn",
+                label: "--- 그룹을 선택해주세요 ---"
+            })
             setGroupCodes(response.data)
-        } catch(err) {
+        } catch (err) {
             throw err
         }
     }
@@ -59,8 +63,8 @@ function CodeDetailRegisterForm({
                             <td>그룹코드</td>
                             <td>
                                 <select value={groupCode} onChange={handleChangeGroupCode}>
-                                    {groupCodes.map((groupCode: any) => (
-                                        <option value={groupCode.value} key={groupCode.value}>{groupCode.label}</option>
+                                    {groupCodes.map((groupCode: any, index: number) => (
+                                        <option value={groupCode.value} key={groupCode.value} disabled={index === 0}>{groupCode.label}</option>
                                     ))}
                                 </select>
                             </td>
@@ -77,8 +81,8 @@ function CodeDetailRegisterForm({
                 </table>
 
                 <div>
-                    <button type="submit">등록</button>
-                    <Link to="/codedetail">취소</Link>
+                    <button type="submit" className="likebutton success">등록</button>
+                    <Link to="/codedetail" className="likebutton">취소</Link>
                 </div>
             </form>
         </article>

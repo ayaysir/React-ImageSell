@@ -71,8 +71,8 @@ function ItemRegisterForm({ onRegister }: any) {
                 </table>
 
                 <div>
-                    <button type="submit">등록</button>
-                    <Link to={`/item`}>취소</Link>
+                    <button type="submit" className="likebutton success">등록</button>
+                    <Link to={`/item`} className="likebutton">취소</Link>
                 </div>
             </form>
 

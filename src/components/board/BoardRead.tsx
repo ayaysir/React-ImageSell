@@ -43,7 +43,7 @@ function BoardRead({ board, isLoading, boardNo, onRemove, myInfo }: any ) {
                             <tr>
                                 <td>내용</td>
                                 <td>
-                                    <textarea value={board.content} readOnly></textarea>
+                                    <textarea value={board.content} readOnly rows={5}></textarea>
                                 </td>
                             </tr>
                         </tbody>
@@ -51,11 +51,11 @@ function BoardRead({ board, isLoading, boardNo, onRemove, myInfo }: any ) {
                     <div>
                         {isOwn && (
                             <>
-                                <Link to={`/board/edit/${boardNo}`}>편집</Link>
-                                <button onClick={onRemove}>삭제</button>
+                                <Link to={`/board/edit/${boardNo}`} className="likebutton">편집</Link>
+                                <button onClick={onRemove} className="likebutton danger">삭제</button>
                             </>
                         )}
-                        <Link to={`/board/`}>목록</Link>
+                        <Link to={`/board/`} className="likebutton">목록</Link>
                     </div>
                 </>
             )}

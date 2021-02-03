@@ -88,9 +88,9 @@ function CodeDetailModifyForm({
                         </table>
 
                         <div>
-                            <button type="submit">수정</button>
-                            <Link to={`/codedetail/read/${codeDetail.groupCode}`}>취소</Link>
-                        </div>
+                            <button type="submit" className="likebutton success">수정</button>
+                            <Link to={`/codedetail/read/${codeDetail.groupCode}`} className="likebutton">취소</Link>
+                        </div> 
                     </form>
                 )}
             </article>

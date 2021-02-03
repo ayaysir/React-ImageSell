@@ -113,3 +113,6 @@ export const addAttach = (formData: FormData) => client.post(`/pds/upload`, form
 
 // 공개자료 첨부파일 목록 조회 API 호출 함수
 export const fetchAttachList = (itemId: number) => client.get(`/pds/attach/${itemId}`)
+
+// 서버 동작 확인
+export const getServerStatus = () => client.get(`/`)

@@ -163,8 +163,8 @@ function MemberModifyForm({ member, isLoading, onModify }: MemberModifyInfo) {
                     </table>
 
                     <div>
-                        <button type="submit">수정</button>
-                        <Link to={`/member/read/${member.userNo}`}>취소</Link>
+                        <button type="submit" className="likebutton success">수정</button>
+                        <Link to={`/member/read/${member.userNo}`} className="likebutton">취소</Link>
                     </div>
                 </form>
             )}

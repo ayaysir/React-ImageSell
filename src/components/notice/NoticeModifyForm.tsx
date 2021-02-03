@@ -67,8 +67,8 @@ function NoticeModifyForm({ notice, isLoading, onModify }: any ) {
                     </table>
 
                     <div>
-                        <button type="submit">수정</button>
-                        <Link to={`/notice/read/${notice.noticeNo}`}>취소</Link>
+                        <button type="submit" className="likebutton success">수정</button>
+                        <Link to={`/notice/read/${notice.noticeNo}`} className="likebutton">취소</Link>
                     </div>
                 </form>
             )}

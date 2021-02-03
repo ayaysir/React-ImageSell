@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom"
 
-function NoticeList({ notices, isLoading, isAdmin }: any ) {
+function NoticeList({ notices, isLoading, isAdmin }: any) {
 
-    return(
+    return (
         <article>
             <h2>공지사항 목록</h2>
             {isLoading && "로딩중..."}
             {!isLoading && notices && (
                 <>
                     {isAdmin && (
-                        <Link to="/notice/create">새로만들기</Link>
+                        <div className="upside-button-area">
+                            <Link to="/notice/create" className="likebutton">새로 만들기</Link>
+                        </div>
                     )}
-                    <table className="table-board"> 
+                    <table className="table-board">
                         <thead>
                             <tr>
                                 <th align="center">번호</th>
@@ -31,7 +33,6 @@ function NoticeList({ notices, isLoading, isAdmin }: any ) {
                                     <td align="left">
                                         <Link to={`/notice/read/${notice.noticeNo}`}>{notice.title}</Link>
                                     </td>
-                                    <td align="right">{notice.writer}</td>
                                     <td align="center">{notice.regDate}</td>
                                 </tr>
                             ))}

@@ -8,10 +8,10 @@ function MainHeader({ myInfo, isAuthorized, onLogout }: { myInfo: any; isAuthori
             {isAuthorized && myInfo && (
                 <div>
                     <span>{myInfo.userName} 님, 환영합니다.</span>&nbsp;
-                    <button onClick={onLogout}>로그아웃</button>
+                    <button onClick={onLogout} className="likebutton danger small">로그아웃</button>
                 </div>
             )}
-            {!isAuthorized && !myInfo && <Link to="/signin">로그인</Link>}
+            {!isAuthorized && !myInfo && <Link to="/signin" className="likebutton small">로그인</Link>}
         </header>
     )
 }

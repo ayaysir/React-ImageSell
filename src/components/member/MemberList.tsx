@@ -9,7 +9,9 @@ function MemberList({ members, isLoading }: MemberListInfo) {
             {isLoading && "로딩중..."}
             {!isLoading && members && (
                 <>
-                    <Link to="/member/create">새로 만들기</Link>
+                    <div className="upside-button-area">
+                        <Link to="/member/create" className="likebutton">새로 만들기</Link>
+                    </div>
                     <table className="table-board">
                         <thead>
                             <tr>

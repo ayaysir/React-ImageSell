@@ -8,7 +8,9 @@ function BoardList({ boards, isLoading }: any ) {
             {isLoading && "로딩중..."}
             {!isLoading && boards && (
                 <>
-                    <Link to="/board/create">새로만들기</Link>
+                    <div className="upside-button-area">
+                        <Link to="/board/create" className="likebutton">새로 만들기</Link>
+                    </div>
                     <table className="table-board">
                         <thead>
                             <tr>

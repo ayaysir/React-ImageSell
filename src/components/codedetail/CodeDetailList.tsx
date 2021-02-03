@@ -10,7 +10,9 @@ function CodeDetailList({ codeDetails, isLoading }: { codeDetails: Array<any>; i
             {isLoading && "로딩중"}
             {!isLoading && codeDetails && (
                 <>
-                    <Link to="/codedetail/create">새로 만들기</Link>
+                    <div className="upside-button-area">
+                        <Link to="/codedetail/create" className="likebutton">새로 만들기</Link>
+                    </div>
                     <table className="table-board">
                         <thead>
                             <tr>

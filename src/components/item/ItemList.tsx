@@ -9,7 +9,9 @@ function ItemList({ items, isLoading, isAdmin }: any) {
             {!isLoading && items && (
                 <>
                     {isAdmin && (
-                        <Link to="/item/create">새로 만들기</Link>
+                        <div className="upside-button-area">
+                            <Link to="/item/create" className="likebutton">새로 만들기</Link>
+                        </div>
                     )}
                     <table className="table-board">
                         <thead>
@@ -33,7 +35,7 @@ function ItemList({ items, isLoading, isAdmin }: any) {
                                     <td align="left">
                                         <Link to={`/item/read/${item.itemId}`}>{item.itemName}</Link>
                                     </td>
-                                    <td align="right">{item.price}</td>
+                                    <td align="right">{item.price.toLocaleString( 'ko-KR', { style: 'currency', currency: 'KRW' })}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -41,7 +43,7 @@ function ItemList({ items, isLoading, isAdmin }: any) {
                 </>
             )}
         </article>
-        
+
     )
 }
 

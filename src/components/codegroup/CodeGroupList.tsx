@@ -10,7 +10,10 @@ function CodeGroupList({ codeGroups, isLoading }: { codeGroups: Array<any>; isLo
             {isLoading && "로딩중"}
             {!isLoading && codeGroups && (
                 <>
-                    <Link to="/codegroup/create">새로만들기</Link>
+
+                    <div className="upside-button-area">
+                        <Link to="/codegroup/create" className="likebutton">새로 만들기</Link>
+                    </div>
                     <table className="table-board">
                         <thead>
                             <tr>

@@ -57,8 +57,8 @@ function CodeGroupModifyForm({
                         </table>
 
                         <div>
-                            <button type="submit">수정</button>
-                            <Link to={`/codegroup/read/${codeGroup.groupCode}`}>취소</Link>
+                            <button type="submit" className="likebutton success">수정</button>
+                            <Link to={`/codegroup/read/${codeGroup.groupCode}`} className="likebutton">취소</Link>
                         </div>
                     </form>
                 )}

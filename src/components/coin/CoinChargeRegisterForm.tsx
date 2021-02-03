@@ -29,8 +29,8 @@ function CoinChargeRegisterForm({ onRegister }: any) {
                 </table>
 
                 <div>
-                    <button type="submit">충전하기</button>
-                    <Link to="/coin/charge">충전내역</Link>
+                    <button type="submit" className="likebutton success">충전하기</button>
+                    <Link to="/coin/charge" className="likebutton">충전내역</Link>
                 </div>
             </form>
         </article>

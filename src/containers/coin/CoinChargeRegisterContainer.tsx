@@ -8,8 +8,8 @@ const CoinChargeRegisterContainer = ({ history }: RouteComponentProps<any>) => {
     const onRegister = async (amount: string) => {
         // 10만원까지만
         const amountNumber = Number(amount)
-        if(amountNumber > 100000) {
-            alert("최대 10만원까지 충전 가능합니다.")
+        if(amountNumber > 500000) {
+            alert("최대 50만원까지 충전 가능합니다.")
             return
         }
 

@@ -25,7 +25,7 @@ function CoinChargeList({ chargeCoins, isLoading }: any) {
                             {!!chargeCoins.length && chargeCoins.map((chargeCoin: any) => (
                                 <tr key={chargeCoin.historyNo}>
                                     <td align="center">{chargeCoin.historyNo}</td>
-                                    <td align="left">{chargeCoin.amount}</td>
+                                    <td align="left">{chargeCoin.amount.toLocaleString( 'ko-KR', { style: 'currency', currency: 'KRW' })}</td>
                                     <td align="center">{chargeCoin.regDate}</td>
                                 </tr>
                             ))}

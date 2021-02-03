@@ -39,11 +39,11 @@ function NoticeRead({ notice, isLoading, noticeNo, onRemove, isAdmin }: any ) {
                     <div>
                         {isAdmin && (
                             <>
-                                <Link to={`/notice/edit/${noticeNo}`}>편집</Link>
-                                <button onClick={onRemove}>삭제</button>
+                                <Link to={`/notice/edit/${noticeNo}` } className="likebutton">편집</Link>
+                                <button onClick={onRemove} className="likebutton danger">삭제</button>
                             </>
                         )}
-                        <Link to={`/notice`}>목록</Link>
+                        <Link to={`/notice`} className="likebutton">목록</Link>
                     </div>
                 </>
             )}

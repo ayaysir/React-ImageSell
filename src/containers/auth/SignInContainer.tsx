@@ -17,10 +17,18 @@ const SignInContainer: React.FunctionComponent<RouteComponentProps> = ({ history
 
     // 로그인 처리
     const onSignIn = (userId: string, password: string) => {
+
+        // 유효성 검사
+        if(!userId || !password) {
+            alert("아이디나 비밀번호를 입력하세요.")
+            return
+        }
+
         try {
             dispatch(login({ userId, password }))
         } catch(err) {
-            console.log(err)
+            alert("문제가 발생하여 로그인할 수 없습니다.")
+            console.log("loginError", err)
         }
     }
 
@@ -35,7 +43,7 @@ const SignInContainer: React.FunctionComponent<RouteComponentProps> = ({ history
         if(myInfo) {
             alert("로그인 되었습니다.")
             history.push("/")
-        }
+        } 
     }, [myInfo, history])
 
     // 로그인 컴포넌트 표시

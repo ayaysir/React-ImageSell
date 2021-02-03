@@ -32,6 +32,7 @@ function* loginSaga(action: { payload: { userId: any; password: any } }) {
         // 쿠키에 액세스 토큰 저장
         Cookies.set("accessToken", accessToken, { expires: 1 })
     } catch (err) {
+        alert("로그인할 수 없습니다. 아이디나 비밀번호가 잘못되었습니다.")
         console.log("error from loginSaga", err)
     }
 }

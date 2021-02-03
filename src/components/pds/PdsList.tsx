@@ -2,13 +2,17 @@ import { Link } from "react-router-dom"
 
 function PdsList({ pdsItems, isLoading, isAdmin }: any) {
 
-    return(
+    return (
         <article>
             <h2>공개자료실 목록</h2>
             {isLoading && "로딩중..."}
             {!isLoading && pdsItems && (
                 <>
-                    {isAdmin && <Link to="/pds/create">새로만들기</Link>}
+                    {isAdmin && (
+                        <div className="upside-button-area">
+                            <Link to="/pds/create" className="likebutton">새로 만들기</Link>
+                        </div>
+                    )}
                     <table className="table-board">
                         <thead>
                             <tr>

@@ -39,7 +39,7 @@ function SignInForm({ onSignIn }: { onSignIn: Function }) {
                         </tr>
                         <tr>
                             <td colSpan={2} align="center">
-                                <button type="submit">로그인</button>
+                                <button type="submit" className="likebutton">로그인</button>
                             </td>
                         </tr>
                     </tbody>

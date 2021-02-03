@@ -95,9 +95,9 @@ function MemberRead({ member, isLoading, userNo, onRemove }: MemberReadInfo) {
                         </tbody>
                     </table>
 
-                    <Link to={`/member/edit/${userNo}`}>편집</Link>
-                    <button onClick={onRemove}>삭제</button>
-                    <Link to={`/member/`}>목록</Link>
+                    <Link to={`/member/edit/${userNo}`} className="likebutton">편집</Link>
+                    <button onClick={onRemove} className="likebutton danger">삭제</button>
+                    <Link to={`/member/`} className="likebutton">목록</Link>
                 </>
             )}
         </article>

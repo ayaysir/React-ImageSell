@@ -32,7 +32,7 @@ function UserItemRead({ userItem, isLoading }: any ) {
                             <tr>
                                 <td>상품가격</td>
                                 <td>
-                                    <input type="text" value={userItem.price} readOnly />
+                                    <input type="text" value={userItem.price.toLocaleString( 'ko-KR', { style: 'currency', currency: 'KRW' })} readOnly />
                                 </td>
                             </tr>
                             <tr>
@@ -50,7 +50,7 @@ function UserItemRead({ userItem, isLoading }: any ) {
                         </tbody>
                     </table>
                     <div>
-                        <Link to={`/useritem`}>목록</Link>
+                        <Link to={`/useritem`} className="likebutton">목록</Link>
                     </div>
                 </>
             )}

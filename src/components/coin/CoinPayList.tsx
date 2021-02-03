@@ -7,7 +7,7 @@ function CoinPayList({ payCoins, isLoading }: any) {
             {isLoading && "로딩중..."}
             {!isLoading && payCoins && (
                 <>
-                    <table>
+                    <table className="table-board">
                         <thead>
                             <tr>
                                 <th align="center">번호</th>
@@ -26,7 +26,7 @@ function CoinPayList({ payCoins, isLoading }: any) {
                                 <tr key={payCoin.historyNo}>
                                     <td align="center">{payCoin.historyNo}</td>
                                     <td align="center">{payCoin.itemName}</td>
-                                    <td align="left">{payCoin.amount}</td>
+                                    <td align="left">{payCoin.amount.toLocaleString( 'ko-KR', { style: 'currency', currency: 'KRW' })}</td>
                                     <td align="center">{payCoin.regDate}</td>
                                 </tr>
                             ))}

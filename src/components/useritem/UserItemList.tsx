@@ -35,7 +35,7 @@ function UserItemList({ userItems, isLoading, onDownload }: any) {
                                         {userItem.userItemNo}
                                     </td>
                                     <td align="left"><Link to={`/useritem/read/${userItem.userItemNo}`}>{userItem.itemName}</Link></td>
-                                    <td align="right">{userItem.price}</td>
+                                    <td align="right">{userItem.price.toLocaleString( 'ko-KR', { style: 'currency', currency: 'KRW' })}</td>
                                     <td align="center">{userItem.regDate}</td>
                                     <td align="center">
                                         <span className="btn-download" onClick={() => handleClickDownload(userItem.userItemNo)}>DOWNLOAD</span>

@@ -45,8 +45,8 @@ function CodeGroupRegisterForm({
                 </table>
 
                 <div>
-                    <button type="submit">등록</button>
-                    <Link to="/codegroup">취소</Link>
+                    <button type="submit" className="likebutton success">등록</button>
+                    <Link to="/codegroup" className="likebutton">취소</Link>
                 </div>
             </form>
         </article>

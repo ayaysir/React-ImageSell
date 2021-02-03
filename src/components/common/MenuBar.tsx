@@ -15,7 +15,7 @@ function MenuBar({ isAuthorized, isAdmin }: { isAuthorized: boolean; isAdmin: bo
                             <>
                                 <td width="120"><Link className="menu" to="/codegroup" >코드그룹 관리</Link></td>
                                 <td width="120"><Link className="menu" to="/codedetail">코드 관리</Link></td>
-                                <td width="120"><Link className="menu" to="/member">회원 관리</Link></td>
+                                {/* <td width="120"><Link className="menu" to="/member">회원 관리</Link></td> */}
                                 <td width="120"><Link className="menu" to="/board">회원 게시판</Link></td>
                                 <td width="120"><Link className="menu" to="/notice">공지사항 관리</Link></td>
                                 <td width="120"><Link className="menu" to="/item">상품 관리</Link></td>

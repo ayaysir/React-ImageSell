@@ -70,9 +70,9 @@ function CodeDetailRead({
                         </tbody>
                     </table>
 
-                    <Link to={`/codedetail/edit/${groupCode}/${codeValue}`}>편집</Link>
-                    <button onClick={onRemove}>삭제</button>
-                    <Link to={`/codedetail/`}>목록</Link>
+                    <Link to={`/codedetail/edit/${groupCode}/${codeValue}`} className="likebutton">편집</Link>
+                    <button onClick={onRemove} className="likebutton danger">삭제</button>
+                    <Link to={`/codedetail/`} className="likebutton">목록</Link>
                 </>
             )}
         </article>

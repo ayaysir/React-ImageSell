@@ -1,7 +1,44 @@
-# 사이트 주소
-http://image-shop.s3-website.ap-northeast-2.amazonaws.com/
+# 이미지 판매 사이트 (ImageShop)
+React + Redux-saga + Typescript 로 제작한 이미지 판매 사이트입니다.
 
----
+* 사이트: http://image-shop.s3-website.ap-northeast-2.amazonaws.com/
+* 참고서적 및 API 서버 출처: 실전 리액트 (온노트)
+* 영상으로 보기: https://www.youtube.com/watch?v=_9WLfgwCz10
+
+## 특징
+
+- 외부 API 서버를 이용한 SPA 형태의 홈페이지
+- React-router를 이용한 URL 라우팅 구현
+- Functional Hooks 사용, MVVM 패턴에 맞춰 페이지, 컨테이너, 컴포넌트 역할 구분
+- 관리자 및 회원 가입 & 로그인 가능 (OAuth 2 이용)
+- 사용자 권한에 따른 페이지 접근 제한 기능
+- 회원만 글 작성이 가능한 게시판
+- 공지사항 (관리자만 작성 가능)
+- 상품정보 CRUD 기능
+- 회원이 상품 구매에 이용할 코인 충전 기능
+- 충전 내역 및 구매 내역 확인
+- 이미지 구입 후 다운로드 기능
+- 공개자료실
+
+## 스크린샷
+![imageshop_7](./screenshots/imageshop_7.jpg)
+![imageshop_8](./screenshots/imageshop_8.jpg)
+![imageshop_9](./screenshots/imageshop_9.jpg)
+![imageshop_10](./screenshots/imageshop_10.jpg)
+![imageshop_1](./screenshots/imageshop_1.jpg)
+![imageshop_2](./screenshots/imageshop_2.jpg)
+![imageshop_3](./screenshots/imageshop_3.jpg)
+![imageshop_4](./screenshots/imageshop_4.jpg)
+![imageshop_5](./screenshots/imageshop_5.jpg)
+![imageshop_6](./screenshots/imageshop_6.jpg)
+![imageshop_11](./screenshots/imageshop_11.jpg)
+![imageshop_12](./screenshots/imageshop_12.jpg)
+![imageshop_13](./screenshots/imageshop_13.jpg)
+![imageshop_14](./screenshots/imageshop_14.jpg)
+![imageshop_15](./screenshots/imageshop_15.jpg)
+![imageshop_16](./screenshots/imageshop_16.jpg)
+![imageshop_17](./screenshots/imageshop_17.jpg)
+![imageshop_18](./screenshots/imageshop_18.jpg)
 
 
 # Getting Started with Create React App

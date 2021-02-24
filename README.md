@@ -1,7 +1,6 @@
 # 이미지 판매 사이트 (ImageShop)
 React + Redux-saga + Typescript 로 제작한 이미지 판매 사이트입니다.
 
-* 사이트: http://image-shop.s3-website.ap-northeast-2.amazonaws.com/
 * 참고서적 및 API 서버 출처: 실전 리액트 (온노트)
 * 영상으로 보기: https://www.youtube.com/watch?v=_9WLfgwCz10
 
